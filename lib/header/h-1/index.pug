@@ -1,1 +1,105 @@
 header.canhcam-header-1
+	//- button.hamburger.hamburger--emphatic.is-active(type='button')
+	//- 	span.hamburger-box
+	//- 		span.hamburger-inner
+
+	section.left-nav
+		article.tools-nav
+			.container
+				.row
+					.col.d-flex.align-items-center
+						i.fas.fa-map-marker-alt
+						a(href="javascript:void(0)") store
+		article.main-nav
+			.container
+				.row
+					.col
+						- var n = 1
+						ul.main-nav-item-wrapper
+							while n < 5
+								li.main-nav-item
+									a(href="javascript:void(0)") 
+										span= "Product " + n
+										i.lnr.lnr-chevron-down
+									.megamenu
+										.row
+											.col-lg-2.megamenu-item
+												img(src="./img/home/home_gallery_1.png", alt="")
+												h2= "gunam art living" + n
+												ul
+													li
+														a(href="javascript:void(0)") GunamAL 1
+													li
+														a(href="javascript:void(0)") GunamAL 2
+													li
+														a(href="javascript:void(0)") GunamAL 3
+											.col-lg-2.megamenu-item
+												img(src="./img/home/home_gallery_2.png", alt="")
+												h2 Các phòng
+												ul
+													li
+														a(href="javascript:void(0)") Phòng khách
+													li
+														a(href="javascript:void(0)") Phòng ăn
+													li
+														a(href="javascript:void(0)") Phòng ngủ
+													li
+														a(href="javascript:void(0)") Phòng làm việc
+											.col-lg-2.megamenu-item
+												img(src="./img/home/home_gallery_3.png", alt="")
+												h2 ngoài trời
+												ul
+													li
+														a(href="javascript:void(0)") Sofa ngoài trời
+													li
+														a(href="javascript:void(0)") Bàn ngoài trời
+													li
+														a(href="javascript:void(0)") Ghế ngoài trời
+													li
+														a(href="javascript:void(0)") Bàn ghế Quán Cafe
+											.col-lg-2.megamenu-item
+												img(src="./img/home/home_gallery_2.png", alt="")
+												h2 brands
+												ul
+													li
+														a(href="javascript:void(0)") Brand A
+													li
+														a(href="javascript:void(0)") Brand B
+													li
+														a(href="javascript:void(0)") Brand C
+													li
+														a(href="javascript:void(0)") Brand D
+											.col-lg-2.megamenu-item
+												img(src="./img/home/home_gallery_1.png", alt="")
+												h2 ngoài trời
+												ul
+													li
+														a(href="javascript:void(0)") Sofa ngoài trời
+													li
+														a(href="javascript:void(0)") Bàn ngoài trời
+													li
+														a(href="javascript:void(0)") Ghế ngoài trời
+													li
+														a(href="javascript:void(0)") Bàn ghế Quán Cafe
+											.col-lg-2.megamenu-item
+												img(src="./img/home/home_gallery_3.png", alt="")
+												h2 gunam art living
+												ul
+													li
+														a(href="javascript:void(0)") GunamAL 1
+													li
+														a(href="javascript:void(0)") GunamAL 2
+													li
+														a(href="javascript:void(0)") GunamAL 3
+								- n = n + 1
+	section.logo
+		img(src="./img/global/logo.png", alt="")
+	section.right-nav
+		article.tools-nav
+			.container
+				.row
+					.col
+		article.main-nav
+			.container
+				.row
+					.col

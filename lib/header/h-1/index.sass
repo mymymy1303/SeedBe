@@ -1,0 +1,84 @@
+.canhcam-header-1
+	padding-top: 1.25rem
+	position: sticky
+	top: 0
+	left: 0
+	z-index: 9999
+	width: 100%
+	.left-nav
+		.tools-nav
+			a
+				font-size: .75rem
+				font-weight: 500
+				color: color-get($mau, den-1)
+				text-transform: uppercase
+				display: block
+				margin-left: .5rem
+				transition: all .3s linear
+				text-decoration: none
+				&:active, &:focus, &:hover
+					color: color-get($mau, main) 
+		.main-nav
+			ul
+				font-size: 0
+				list-style: none
+				li.main-nav-item
+					display: inline-block
+					margin-right: 2rem
+					&:last-child
+						margin-right: 0
+					> a
+						display: block
+						margin-top: .85rem
+						padding-bottom: 1.875rem
+						font-size: .875rem
+						font-weight: 700
+						color: color-get($mau, den-1)
+						text-transform: uppercase
+						transition: all .1s linear
+						text-decoration: none
+						i, em
+							display: inline-block
+							color: color-get($mau, den-1)
+							margin-left: .75rem
+							transform: rotateX(0deg)
+							transition: all .3s linear
+					> .megamenu
+						background: color-get($mau, trang)
+						position: absolute
+						z-index: 1
+						left: 0.9375rem
+						opacity: 0
+						transform: rotateY(120deg)
+						transition: all .3s linear
+						img
+							width: 100%
+						h1, h2, h3, h4, h5, h6
+							font-size: 1rem
+							font-weight: 700
+							color: color-get($mau, den-1)
+							text-transform: uppercase
+							margin-top: 1.875rem
+						ul
+							margin-top: .5rem
+							li
+								a
+									font-size: .875rem
+									font-weight: 400
+									color: color-get($mau, xam-1)
+									line-height: 1.5rem
+									transition: all .3s linear
+									text-decoration: none
+									&:active, &:focus, &:hover
+										color: color-get($mau, main)
+
+
+					&:hover
+						> a
+							color: color-get($mau, main)
+							i, em
+								transform: rotateX(180deg)
+						> .megamenu
+							transform: rotateY(0deg)
+							z-index: 999
+							opacity: 1

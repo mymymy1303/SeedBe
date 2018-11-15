@@ -1,12 +1,12 @@
-@function r($size)
-	@return ($size/14px)*1rem
+@function rem($size)
+	@return ($size/16px)*1rem
 
 
 @function mbTitle($size)
 	$ratio: 48px / 42px
 	@return $size / $ratio
 
-=line($line)
+=text-clamp($line)
 	display: -webkit-box
 	text-overflow: ellipsis
 	-webkit-line-clamp: $line
