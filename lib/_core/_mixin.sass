@@ -1,0 +1,37 @@
+@function r($size)
+	@return ($size/14px)*1rem
+
+
+@function mbTitle($size)
+	$ratio: 48px / 42px
+	@return $size / $ratio
+
+=line($line)
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-line-clamp: $line
+	overflow: hidden
+	-webkit-box-orient: vertical
+
+=mdi($content)
+	display: inline-block
+	font-family: "Material Design Icons"
+	font-size: inherit
+	text-rendering: auto
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	line-height: inherit
+	-webkit-font-smoothing: antialiased
+	content: $content
+	
+=linearicons($content)
+	font-family: 'Linearicons-Free'
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	content: $content

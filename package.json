@@ -1,0 +1,36 @@
+{
+	"name": "demo-angularjs",
+	"version": "1.0.0",
+	"description": "a starter project, i have used this to demo gulp 4 and angularJS",
+	"main": "gulpfile.babel.js",
+	"scripts": {
+		"test": "test",
+		"start": "gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "N/A"
+	},
+	"author": "sonvh2510",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.1.5",
+		"@babel/preset-env": "^7.1.5",
+		"@babel/register": "^7.0.0",
+		"browser-sync": "^2.26.3",
+		"del": "^3.0.0",
+		"fs": "0.0.1-security",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^6.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^3.10.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^5.0.3",
+		"gulp-pug": "^4.0.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-uglify-es": "^1.0.4",
+		"gulp-watch": "^5.0.1"
+	}
+}
