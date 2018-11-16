@@ -9,7 +9,7 @@ $(document).ready(function () {
 	})
 
 	//Trigger setItemHeight, setItemWidth when document is ready
-	setItemWidth($('.megamenu'), $('main-nav-item-wrapper').width())
+	setItemWidth($('.megamenu'), $('.tools-nav>.container').width())
 	setItemHeight($('.megamenu-item img'), $('.megamenu-item').width())
 
 	// $('.main-nav-item').on('mouseenter', (e) => {
@@ -30,6 +30,6 @@ const setItemWidth = (itemSelector, itemWidth) => {
 }
 
 window.onresize = function () {
-	setItemWidth($('.megamenu'), $('main-nav-item-wrapper').width())
+	setItemWidth($('.megamenu'), $('.tools-nav>.container').width())
 	setItemHeight($('.megamenu-item img'), $('.megamenu-item').width())
 }

@@ -3,17 +3,26 @@ header.canhcam-header-1
 	//- 	span.hamburger-box
 	//- 		span.hamburger-inner
 
-	section.left-nav
+	section.custom-nav
 		article.tools-nav
 			.container
 				.row
 					.col.d-flex.align-items-center
 						i.fas.fa-map-marker-alt
 						a(href="javascript:void(0)") store
+					.col.d-flex.align-items-center.justify-content-end
+						i.fas.fa-user
+						.language
+							.dropdown
+								a#dropdownMenuLink.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									| VN
+								.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuLink')
+									a.dropdown-item.ml-0(href='#').text-center.text-capitalize Việt Nam
+									a.dropdown-item.ml-0(href='#').text-center.text-capitalize English
 		article.main-nav
 			.container
 				.row
-					.col
+					.col-lg-6
 						- var n = 1
 						ul.main-nav-item-wrapper
 							while n < 5
@@ -92,14 +101,7 @@ header.canhcam-header-1
 													li
 														a(href="javascript:void(0)") GunamAL 3
 								- n = n + 1
+	
+
 	section.logo
 		img(src="./img/global/logo.png", alt="")
-	section.right-nav
-		article.tools-nav
-			.container
-				.row
-					.col
-		article.main-nav
-			.container
-				.row
-					.col

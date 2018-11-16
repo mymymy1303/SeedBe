@@ -5,8 +5,9 @@
 	left: 0
 	z-index: 9999
 	width: 100%
-	.left-nav
+	.custom-nav
 		.tools-nav
+			margin-bottom: .85rem
 			a
 				font-size: .75rem
 				font-weight: 500
@@ -18,25 +19,44 @@
 				text-decoration: none
 				&:active, &:focus, &:hover
 					color: color-get($mau, main) 
+			// .language-picker
+			// 	list-style: none
+			// 	padding: 0
+			// 	margin: 0
+			// 	position: absolute
+			// 	right: .9375rem
+			// 	top: 
+			// 	li
+			// 		height: 2rem
+			// 		width: 4rem
+			// 		background: pink
+			// 		line-height: 2rem
+			// 		text-align: center
+			// 		background-color: #ececec
+			// 		a
+			// 			margin: 0
 		.main-nav
 			ul
 				font-size: 0
 				list-style: none
 				li.main-nav-item
 					display: inline-block
-					margin-right: 2rem
+					margin-right: 1rem
 					&:last-child
 						margin-right: 0
+					+media-breakpoint-up(xl)
+						margin-right: 2rem
 					> a
 						display: block
-						margin-top: .85rem
 						padding-bottom: 1.875rem
-						font-size: .875rem
+						font-size: .75rem
 						font-weight: 700
 						color: color-get($mau, den-1)
 						text-transform: uppercase
 						transition: all .1s linear
 						text-decoration: none
+						+media-breakpoint-up(xl)
+							font-size: 0.875rem
 						i, em
 							display: inline-block
 							color: color-get($mau, den-1)
@@ -46,10 +66,11 @@
 					> .megamenu
 						background: color-get($mau, trang)
 						position: absolute
+						visibility: hidden
+						transform: scale(0)
 						z-index: 1
 						left: 0.9375rem
 						opacity: 0
-						transform: rotateY(120deg)
 						transition: all .3s linear
 						img
 							width: 100%
@@ -79,6 +100,7 @@
 							i, em
 								transform: rotateX(180deg)
 						> .megamenu
-							transform: rotateY(0deg)
+							visibility: visible
+							transform: scale(1)
 							z-index: 999
 							opacity: 1
