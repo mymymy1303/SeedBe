@@ -100,8 +100,84 @@ header.canhcam-header-1
 														a(href="javascript:void(0)") GunamAL 2
 													li
 														a(href="javascript:void(0)") GunamAL 3
+										.row.shipping-info
+											.col-12
+												i.fa.fa-shipping-fast
+												p Miễn phí vận chuyển khu vực Thành phố Hồ Chí Minh.
+												a(href="javascript:void(0)") Tìm hiểu thêm
 								- n = n + 1
 	
-
+					.col-lg-6.d-lg-flex.justify-content-end
+						- var m = 1
+						ul.main-nav-item-wrapper
+							while m < 5
+								li.main-nav-item
+									a(href="javascript:void(0)") 
+										span= "About"
+										i.lnr.lnr-chevron-down
+									.nth-dropdown
+										ul
+											li
+												a(href="javascript:void(0)") Item item item 1
+											li
+												a(href="javascript:void(0)") Item item item 1
+											li
+												a(href="javascript:void(0)") Item item item 1
+											li
+												a(href="javascript:void(0)") Item item item 1
+								- m = m + 1
+						
+							.search-wrapper.fa.fa-search.main-nav-item
+								.searchbox
+									input(type="text").searchinput
+									button.searchbutton
+										i.fa.fa-search
+							.cart-wrapper.main-nav-item
+								.cart
+									span Cart
+									span.cart-item-count 0
+								.cart-expand
+									.cart-header
+										.cart-title 
+											|Có 
+											span 10 
+											|sản phẩm trong giỏ hàng
+										.cart-close-button
+											i.lnr.lnr-cross
+									.cart-list
+										.item
+											.item-image
+												img(src="./img/sp/1.png", alt="")
+											.item-content
+												.item-title 
+													a(href="javascript:void(0)") ghế gunam 15
+												.item-amount 2,900,000đ x 1 
+											.item-remove-button
+												i.lnr.lnr-trash
+										.item
+											.item-image
+												img(src="./img/sp/2.png", alt="")
+											.item-content
+												.item-title 
+													a(href="javascript:void(0)") ghế gunam 15
+												.item-amount 2,900,000đ x 1 
+											.item-remove-button
+												i.lnr.lnr-trash
+										.item
+											.item-image
+												img(src="./img/sp/3.png", alt="")
+											.item-content
+												.item-title 
+													a(href="javascript:void(0)") ghế gunam 15
+												.item-amount 2,900,000đ x 1 
+											.item-remove-button
+												i.lnr.lnr-trash
+									.cart-checkout
+										.cart-total
+											|Tạm tính: 
+											span 8,700,000đ
+										.cart-button
+											a(href="javascript:void(0)").btn-viewcart Tiến hành thanh toán
 	section.logo
-		img(src="./img/global/logo.png", alt="")
+		a(href="javascript:void(0)")
+			img(src="./img/global/logo.png", alt="")

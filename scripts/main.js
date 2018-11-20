@@ -12,12 +12,23 @@ $(document).ready(function () {
 	setItemWidth($('.megamenu'), $('.tools-nav>.container').width())
 	setItemHeight($('.megamenu-item img'), $('.megamenu-item').width())
 
-	// $('.main-nav-item').on('mouseenter', (e) => {
-	// 	$(e.currentTarget).toggleClass('main-nav-item-active')
-	// })
-	// $('.main-nav-item').on('mouseleave', (e) => {
-	// 	$(e.currentTarget).removeClass('main-nav-item-active')
-	// })
+	//Megamenu toggle handler
+	$('.main-nav-item').on('click', (e) => {
+		let current_nav = e.currentTarget
+		$('.main-nav-item').each((i, e) => {
+			$(e).not($(current_nav)).removeClass('main-nav-item-active')
+		})
+		$(e.currentTarget).toggleClass('main-nav-item-active')
+	})
+	$('.main-nav-item.search-wrapper .searchbox').on('click', (e) => {
+		e.stopPropagation()
+	})
+	$('.main-nav-item.cart-wrapper .cart-expand').on('click', (e) => {
+		e.stopPropagation()
+	})
+	$('.main-nav-item.cart-wrapper .cart-close-button').on('click', (e) => {
+		$(e.currentTarget).parent().parent().parent().removeClass('main-nav-item-active')
+	})
 })
 
 const setItemHeight = (itemSelector, itemHeight) => {
