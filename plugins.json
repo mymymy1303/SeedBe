@@ -10,7 +10,7 @@
 		"bower_components/owl.carousel/dist/assets/owl.theme.default.min.css",
 		"bower_components/offline/themes/offline-theme-default.css",
 		"bower_components/offline/themes/offline-language-english.css",
-		"bower_components/css-hamburgers/dist/hamburgers.min.css"
+		"bower_components/css-hamburgers/dist/hamburgers.css"
 	],
 	"scripts":[
 		"bower_components/jquery/dist/jquery.min.js",
@@ -18,6 +18,8 @@
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
 		"bower_components/offline/offline.min.js",
 		"bower_components/owl.carousel/dist/owl.carousel.min.js",
-		"plugins/bigimg.js"
+		"plugins/bigimg.js",
+		"plugins/mapping.js",
+		"plugins/mapping-listener.js"
 	]
 }

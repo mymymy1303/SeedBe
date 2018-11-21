@@ -1,16 +1,14 @@
 header.canhcam-header-1
-	//- button.hamburger.hamburger--emphatic.is-active(type='button')
-	//- 	span.hamburger-box
-	//- 		span.hamburger-inner
 
 	section.custom-nav
 		article.tools-nav
 			.container
-				.row
-					.col.d-flex.align-items-center
+				.row.justify-content-between
+					.d-flex.align-items-center
 						i.fas.fa-map-marker-alt
 						a(href="javascript:void(0)") store
-					.col.d-flex.align-items-center.justify-content-end
+					.logo-mobile
+					.d-flex.align-items-center
 						i.fas.fa-user
 						.language
 							.dropdown
@@ -19,165 +17,193 @@ header.canhcam-header-1
 								.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuLink')
 									a.dropdown-item.ml-0(href='#').text-center.text-capitalize Việt Nam
 									a.dropdown-item.ml-0(href='#').text-center.text-capitalize English
+		
+		article.mobile-nav
+			.container
+				.row.align-items-center
+					button.hamburger.hamburger--emphatic(type='button')
+						span.hamburger-box
+							span.hamburger-inner
+					.mobile-search.fas.fa-search
+					.mobile-cart
+
+		article.side-nav.container
+
 		article.main-nav
 			.container
 				.row
-					.col-lg-6
-						- var n = 1
-						ul.main-nav-item-wrapper
-							while n < 5
-								li.main-nav-item
-									a(href="javascript:void(0)") 
-										span= "Product " + n
-										i.lnr.lnr-chevron-down
-									.megamenu
-										.row
-											.col-lg-2.megamenu-item
-												img(src="./img/home/home_gallery_1.png", alt="")
-												h2= "gunam art living" + n
-												ul
-													li
-														a(href="javascript:void(0)") GunamAL 1
-													li
-														a(href="javascript:void(0)") GunamAL 2
-													li
-														a(href="javascript:void(0)") GunamAL 3
-											.col-lg-2.megamenu-item
-												img(src="./img/home/home_gallery_2.png", alt="")
-												h2 Các phòng
-												ul
-													li
-														a(href="javascript:void(0)") Phòng khách
-													li
-														a(href="javascript:void(0)") Phòng ăn
-													li
-														a(href="javascript:void(0)") Phòng ngủ
-													li
-														a(href="javascript:void(0)") Phòng làm việc
-											.col-lg-2.megamenu-item
-												img(src="./img/home/home_gallery_3.png", alt="")
-												h2 ngoài trời
-												ul
-													li
-														a(href="javascript:void(0)") Sofa ngoài trời
-													li
-														a(href="javascript:void(0)") Bàn ngoài trời
-													li
-														a(href="javascript:void(0)") Ghế ngoài trời
-													li
-														a(href="javascript:void(0)") Bàn ghế Quán Cafe
-											.col-lg-2.megamenu-item
-												img(src="./img/home/home_gallery_2.png", alt="")
-												h2 brands
-												ul
-													li
-														a(href="javascript:void(0)") Brand A
-													li
-														a(href="javascript:void(0)") Brand B
-													li
-														a(href="javascript:void(0)") Brand C
-													li
-														a(href="javascript:void(0)") Brand D
-											.col-lg-2.megamenu-item
-												img(src="./img/home/home_gallery_1.png", alt="")
-												h2 ngoài trời
-												ul
-													li
-														a(href="javascript:void(0)") Sofa ngoài trời
-													li
-														a(href="javascript:void(0)") Bàn ngoài trời
-													li
-														a(href="javascript:void(0)") Ghế ngoài trời
-													li
-														a(href="javascript:void(0)") Bàn ghế Quán Cafe
-											.col-lg-2.megamenu-item
-												img(src="./img/home/home_gallery_3.png", alt="")
-												h2 gunam art living
-												ul
-													li
-														a(href="javascript:void(0)") GunamAL 1
-													li
-														a(href="javascript:void(0)") GunamAL 2
-													li
-														a(href="javascript:void(0)") GunamAL 3
-										.row.shipping-info
-											.col-12
-												i.fa.fa-shipping-fast
-												p Miễn phí vận chuyển khu vực Thành phố Hồ Chí Minh.
-												a(href="javascript:void(0)") Tìm hiểu thêm
-								- n = n + 1
+					.col-lg-6.desktop-nav-product-wrapper
+						.desktop-nav-product
+							- var n = 1
+							ul.main-nav-item-wrapper
+								while n < 5
+									li.main-nav-item
+										a(href="javascript:void(0)") 
+											span= "Product " + n
+											i.lnr.lnr-chevron-down
+										.megamenu
+											.row
+												.col-lg-2.megamenu-item
+													img(src="./img/home/home_gallery_1.png", alt="")
+													a(href="javascript:void(0)").megamenu-item-title 
+														|gunam art living
+														i.lnr.lnr-layers
+													ul
+														li
+															a(href="javascript:void(0)") GunamAL 1
+														li
+															a(href="javascript:void(0)") GunamAL 2
+														li
+															a(href="javascript:void(0)") GunamAL 3
+												.col-lg-2.megamenu-item
+													img(src="./img/home/home_gallery_2.png", alt="")
+													a(href="javascript:void(0)").megamenu-item-title 
+														|Các phòng
+														i.lnr.lnr-layers
+													ul
+														li
+															a(href="javascript:void(0)") Phòng khách
+														li
+															a(href="javascript:void(0)") Phòng ăn
+														li
+															a(href="javascript:void(0)") Phòng ngủ
+														li
+															a(href="javascript:void(0)") Phòng làm việc
+												.col-lg-2.megamenu-item
+													img(src="./img/home/home_gallery_3.png", alt="")
+													a(href="javascript:void(0)").megamenu-item-title 
+														|ngoài trời
+														i.lnr.lnr-layers
+													ul
+														li
+															a(href="javascript:void(0)") Sofa ngoài trời
+														li
+															a(href="javascript:void(0)") Bàn ngoài trời
+														li
+															a(href="javascript:void(0)") Ghế ngoài trời
+														li
+															a(href="javascript:void(0)") Bàn ghế Quán Cafe
+												.col-lg-2.megamenu-item
+													img(src="./img/home/home_gallery_2.png", alt="")
+													a(href="javascript:void(0)").megamenu-item-title 
+														|brands
+														i.lnr.lnr-layers
+													ul
+														li
+															a(href="javascript:void(0)") Brand A
+														li
+															a(href="javascript:void(0)") Brand B
+														li
+															a(href="javascript:void(0)") Brand C
+														li
+															a(href="javascript:void(0)") Brand D
+												.col-lg-2.megamenu-item
+													img(src="./img/home/home_gallery_1.png", alt="")
+													a(href="javascript:void(0)").megamenu-item-title 
+														|ngoài trời
+														i.lnr.lnr-layers
+													ul
+														li
+															a(href="javascript:void(0)") Sofa ngoài trời
+														li
+															a(href="javascript:void(0)") Bàn ngoài trời
+														li
+															a(href="javascript:void(0)") Ghế ngoài trời
+														li
+															a(href="javascript:void(0)") Bàn ghế Quán Cafe
+												.col-lg-2.megamenu-item
+													img(src="./img/home/home_gallery_3.png", alt="")
+													a(href="javascript:void(0)").megamenu-item-title 
+														|gunam art living
+														i.lnr.lnr-layers
+													ul
+														li
+															a(href="javascript:void(0)") GunamAL 1
+														li
+															a(href="javascript:void(0)") GunamAL 2
+														li
+															a(href="javascript:void(0)") GunamAL 3
+											.row.shipping-info
+												.col-12
+													i.fa.fa-shipping-fast
+													p Miễn phí vận chuyển khu vực Thành phố Hồ Chí Minh.
+													a(href="javascript:void(0)") Tìm hiểu thêm
+									- n = n + 1
+		
+					.col-lg-6.d-lg-flex.justify-content-end.desktop-nav-pages-wrapper
+						.desktop-nav-pages
+							- var m = 1
+							ul.main-nav-item-wrapper
+								while m < 5
+									li.main-nav-item
+										a(href="javascript:void(0)") 
+											span= "About"
+											i.lnr.lnr-chevron-down
+										.nth-dropdown
+											ul
+												li
+													a(href="javascript:void(0)") Item item item 1
+												li
+													a(href="javascript:void(0)") Item item item 1
+												li
+													a(href="javascript:void(0)") Item item item 1
+												li
+													a(href="javascript:void(0)") Item item item 1
+									- m = m + 1
+							
+								.search-wrapper.fas.fa-search.main-nav-item
+									.searchbox
+										input(type="text").searchinput
+										button.searchbutton
+											i.fas.fa-search
+								.cart-wrapper.main-nav-item
+									.cart
+										span Cart
+										span.cart-item-count 0
+									//- .cart-expand
+									//- 	.cart-header
+									//- 		.cart-title 
+									//- 			|Có 
+									//- 			span 10 
+									//- 			|sản phẩm trong giỏ hàng
+									//- 		.cart-close-button
+									//- 			i.lnr.lnr-cross
+									//- 	.cart-list
+									//- 		.item
+									//- 			.item-image
+									//- 				img(src="./img/sp/1.png", alt="")
+									//- 			.item-content
+									//- 				.item-title 
+									//- 					a(href="javascript:void(0)") ghế gunam 15
+									//- 				.item-amount 2,900,000đ x 1 
+									//- 			.item-remove-button
+									//- 				i.lnr.lnr-trash
+									//- 		.item
+									//- 			.item-image
+									//- 				img(src="./img/sp/2.png", alt="")
+									//- 			.item-content
+									//- 				.item-title 
+									//- 					a(href="javascript:void(0)") ghế gunam 15
+									//- 				.item-amount 2,900,000đ x 1 
+									//- 			.item-remove-button
+									//- 				i.lnr.lnr-trash
+									//- 		.item
+									//- 			.item-image
+									//- 				img(src="./img/sp/3.png", alt="")
+									//- 			.item-content
+									//- 				.item-title 
+									//- 					a(href="javascript:void(0)") ghế gunam 15
+									//- 				.item-amount 2,900,000đ x 1 
+									//- 			.item-remove-button
+									//- 				i.lnr.lnr-trash
+									//- 	.cart-checkout
+									//- 		.cart-total
+									//- 			|Tạm tính: 
+									//- 			span 8,700,000đ
+									//- 		.cart-button
+									//- 			a(href="javascript:void(0)").btn-viewcart Tiến hành thanh toán
 	
-					.col-lg-6.d-lg-flex.justify-content-end
-						- var m = 1
-						ul.main-nav-item-wrapper
-							while m < 5
-								li.main-nav-item
-									a(href="javascript:void(0)") 
-										span= "About"
-										i.lnr.lnr-chevron-down
-									.nth-dropdown
-										ul
-											li
-												a(href="javascript:void(0)") Item item item 1
-											li
-												a(href="javascript:void(0)") Item item item 1
-											li
-												a(href="javascript:void(0)") Item item item 1
-											li
-												a(href="javascript:void(0)") Item item item 1
-								- m = m + 1
-						
-							.search-wrapper.fa.fa-search.main-nav-item
-								.searchbox
-									input(type="text").searchinput
-									button.searchbutton
-										i.fa.fa-search
-							.cart-wrapper.main-nav-item
-								.cart
-									span Cart
-									span.cart-item-count 0
-								.cart-expand
-									.cart-header
-										.cart-title 
-											|Có 
-											span 10 
-											|sản phẩm trong giỏ hàng
-										.cart-close-button
-											i.lnr.lnr-cross
-									.cart-list
-										.item
-											.item-image
-												img(src="./img/sp/1.png", alt="")
-											.item-content
-												.item-title 
-													a(href="javascript:void(0)") ghế gunam 15
-												.item-amount 2,900,000đ x 1 
-											.item-remove-button
-												i.lnr.lnr-trash
-										.item
-											.item-image
-												img(src="./img/sp/2.png", alt="")
-											.item-content
-												.item-title 
-													a(href="javascript:void(0)") ghế gunam 15
-												.item-amount 2,900,000đ x 1 
-											.item-remove-button
-												i.lnr.lnr-trash
-										.item
-											.item-image
-												img(src="./img/sp/3.png", alt="")
-											.item-content
-												.item-title 
-													a(href="javascript:void(0)") ghế gunam 15
-												.item-amount 2,900,000đ x 1 
-											.item-remove-button
-												i.lnr.lnr-trash
-									.cart-checkout
-										.cart-total
-											|Tạm tính: 
-											span 8,700,000đ
-										.cart-button
-											a(href="javascript:void(0)").btn-viewcart Tiến hành thanh toán
-	section.logo
-		a(href="javascript:void(0)")
-			img(src="./img/global/logo.png", alt="")
+	.logo-desktop
+		.logo
+			a(href="javascript:void(0)")
+				img(src="./img/global/logo.png", alt="")
