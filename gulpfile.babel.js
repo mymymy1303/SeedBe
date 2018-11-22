@@ -145,7 +145,7 @@ function watchDist() {
 		server: {
 			baseDir: paths.dist
 		},
-		port: 9999,
+		port: 9992,
 	})
 	gulp.watch('plugins.json', gulp.series(concatCss, concatJs))
 	gulp.watch('plugins/**/**.*', gulp.series(concatCss, concatJs))

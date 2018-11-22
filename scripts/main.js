@@ -47,8 +47,21 @@ const theHuyApp = {
 }
 
 
+theHuyApp.ready(() => {
+	//Tiny slider initialization for Homepage banner
+	theHuyApp.avoidNull(homeBannerInit);
+})
 
 
+const homeBannerInit = () => {
+	return tns({
+		container: '.banner-home',
+		items: 1,
+		slideBy: 1,
+		nav: false,
+		controlsText: ["<span class='lnr lnr-chevron-left'></span>","<span class='lnr lnr-chevron-right'></span>"],
+	})
+}
 
 
 

@@ -24,6 +24,7 @@
     "animate.css": "^3.5.2",
     "k-sass-core": "^6.0.4",
     "owl.carousel": "^2.3.4",
-    "fancybox": "^3.5.2"
+    "fancybox": "^3.5.2",
+    "tiny-slider": "^2.8.8"
   }
 }

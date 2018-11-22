@@ -7,13 +7,15 @@
 		"bower_components/linearicons/dist/web-font/style.css",
 		"bower_components/mdi/css/materialdesignicons.min.css",
 		"bower_components/offline/themes/offline-theme-default.css",
-		"bower_components/offline/themes/offline-language-english.css"
+		"bower_components/offline/themes/offline-language-english.css",
+		"bower_components/tiny-slider/dist/tiny-slider.css"
 	],
 	"scripts":[
 		"bower_components/jquery/dist/jquery.min.js",
 		"bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
 		"bower_components/offline/offline.min.js",
+		"bower_components/tiny-slider/dist/min/tiny-slider.js",
 		"plugins/bigimg.js",
 		"plugins/mapping.js",
 		"plugins/mapping-listener.js"
