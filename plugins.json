@@ -6,18 +6,14 @@
 		"bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css",
 		"bower_components/linearicons/dist/web-font/style.css",
 		"bower_components/mdi/css/materialdesignicons.min.css",
-		"bower_components/owl.carousel/dist/assets/owl.carousel.min.css",
-		"bower_components/owl.carousel/dist/assets/owl.theme.default.min.css",
 		"bower_components/offline/themes/offline-theme-default.css",
-		"bower_components/offline/themes/offline-language-english.css",
-		"bower_components/css-hamburgers/dist/hamburgers.css"
+		"bower_components/offline/themes/offline-language-english.css"
 	],
 	"scripts":[
 		"bower_components/jquery/dist/jquery.min.js",
 		"bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
 		"bower_components/offline/offline.min.js",
-		"bower_components/owl.carousel/dist/owl.carousel.min.js",
 		"plugins/bigimg.js",
 		"plugins/mapping.js",
 		"plugins/mapping-listener.js"
