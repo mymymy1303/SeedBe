@@ -101,3 +101,127 @@ html, body
 			top: -80px
 			transform: translate3d(-80px, 80px, 0) rotate(-45deg)
 			transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+
+
+//Taglines
+.tagline-1
+	display: flex
+	width: 100%
+	justify-content: space-between
+	align-items: center
+	.title
+		h1, h2, h3, h4, h5, h6
+			font-size: 1rem
+			font-weight: 500
+			color: #666666
+			text-transform: uppercase
+			+media-breakpoint-up(sm)
+				font-size: 1.25rem
+		position: relative
+		&:after
+			position: absolute
+			content: '...'
+			z-index: 1
+			text-align: left
+			font-size: 1.5rem
+			color: #666666
+			top: .5rem
+			line-height: 1.5rem
+	.link
+		a
+			+flex-center()
+			text-decoration: none
+			color: #666666
+			span
+				font-size: rem(13px)
+				margin-right: rem(10px)
+			i, em
+				font-size: rem(14px)
+
+.product
+	width: 100%
+	background-color: #fdfdfd
+	figure
+		cursor: pointer
+		position: relative
+		.product-image
+			+flex-center()
+			padding-top: 2rem
+			padding-bottom: 2rem
+			img
+				max-width: 80%
+				height: auto
+		figcaption
+			+flex-center()
+			flex-direction: column
+			.product-title
+				h1, h2, h3, h4, h5, h6
+					line-height: 1.5rem
+					font-size: 1rem
+					color: #333333
+					font-weight: 700
+					text-transform: uppercase
+					margin-bottom: .1rem
+			.product-description
+				p
+					line-height: 1.5rem
+					font-size: .875rem
+					color: #666666
+					font-weight: 400
+					text-transform: uppercase
+					margin-bottom: .1rem
+			.product-price
+				p
+					line-height: 1.5rem
+					font-size: .9375rem
+					color: #e22323
+					font-weight: 400
+					margin-bottom: .25rem
+
+		&:hover, &:active, &:focus
+			.product-controls
+				transform: scale(1)
+		.product-onsales
+			position: absolute
+			width: 2.5rem
+			height: 2.5rem
+			border-radius: 50%
+			background-color: #e22323
+			top: rem(5px)
+			right: rem(5px)
+			line-height: 2.5rem
+			text-align: center
+			font-size: .75rem
+			color: #ffffff
+			z-index: 77
+		.product-controls
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			z-index: 99
+			background-color: rgba(255, 255, 255, 0.8)
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			transform: scale(0)
+			transition: .3s ease-in-out
+			a
+				text-decoration: none
+				display: block
+				height: 2.5rem
+				width: rem(190px)
+				background-color: rgba(231, 37, 30, .85)
+				font-size: .9375rem
+				color: #ffffff
+				text-align: center
+				line-height: 2.5rem
+				border-radius: (1.25rem)
+				+media-breakpoint-up(sm)
+					width: 80%
+				&:first-child
+					margin-bottom: rem(9px)
+				&:last-child
+					margin-top: rem(9px)

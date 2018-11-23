@@ -1,0 +1,91 @@
+section.home-2
+	padding-top: rem(27.5px)
+	padding-bottom: rem(35px)
+	+media-breakpoint-up(lg)
+		padding-top: rem(55px)
+		padding-bottom: rem(70px)
+	.blocks
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+		.block
+			background: #ececec
+			margin-top: .9375rem
+			margin-bottom: .9375rem
+			flex: 0 0 15.625rem
+			max-width: 15.625rem
+			height: 15.625rem
+			+media-breakpoint-up(sm)
+				flex: 0 0 calc((510px - 1.875rem)/2)
+				max-width: calc((510px - 1.875rem)/2)
+				height: calc((510px - 1.875rem)/2)
+				&:nth-child(2n)
+					margin-left: .9375rem
+				&:nth-child(2n + 1)
+					margin-right: .9375rem
+			+media-breakpoint-up(md)
+				flex: 0 0 calc((690px - 1.875rem)/2)
+				max-width: calc((690px - 1.875rem)/2)
+				height: calc((690px - 1.875rem)/2)
+			+media-breakpoint-up(lg)
+				flex: 0 0 calc((930px - 3.75rem)/3)
+				max-width: calc((930px - 3.75rem)/3)
+				height: calc((930px - 3.75rem)/3)
+				&:nth-child(2n)
+					margin-left: 0
+				&:nth-child(2n + 1)
+					margin-right: 0
+				&:nth-child(3n + 2)
+					margin-left: 1.875rem
+					margin-right: 1.875rem
+			+media-breakpoint-up(xl)
+				flex: 0 0 calc((1110px - 3.75rem)/3)
+				max-width: calc((1110px - 3.75rem)/3)
+				height: calc((1110px - 3.75rem)/3)
+	a
+		text-decoration: none
+		figure
+			+flex-center()
+			flex-direction: column
+			height: 100%
+			width: 100%
+			position: relative
+			.box-zoom
+				width: calc(100% - 3rem)
+				height: 100%
+				overflow: hidden
+				+flex-center()
+				img
+					max-width: 100%
+					height: auto
+					transition: .3s ease-in-out
+			figcaption
+				position: absolute
+				z-index: 1
+				bottom: 10%
+				left: 0
+				width: 100%
+				.title
+					text-align: center
+					h1, h2, h3, h4, h5, h6
+						transition: .3s ease-in-out
+						color: #666666
+						font-size: 1.25rem
+						line-height: 1.125rem
+						font-weight: 300
+						+media-breakpoint-up(md)
+							font-size: 1.5rem
+						+media-breakpoint-up(lg)
+							font-size: 1.5rem
+						+media-breakpoint-up(xl)
+							font-size: 1.875rem
+
+		&:hover
+			figure
+				.title
+					h1, h2, h3, h4, h5, h6
+						color: color-get($mau, main)
+				.box-zoom
+					img
+						transform: scale(.8)

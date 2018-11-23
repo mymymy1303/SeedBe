@@ -50,6 +50,8 @@ const theHuyApp = {
 theHuyApp.ready(() => {
 	//Tiny slider initialization for Homepage banner
 	theHuyApp.avoidNull(homeBannerInit);
+	theHuyApp.avoidNull(homeSaleSliderInit);
+	theHuyApp.avoidNull(homeSaleSliderMapping);
 })
 
 
@@ -63,7 +65,31 @@ const homeBannerInit = () => {
 	})
 }
 
+const homeSaleSliderInit = () => {
+	return tns({
+		container: '.home-product-sale-slider',
+		items: 1,
+		slideBy: 1,
+		nav: false,
+		controlsText: ["<span class='lnr lnr-chevron-left'></span>","<span class='lnr lnr-chevron-right'></span>"],
+		responsive: {
+			576: {
+				items: 2,
+				gutter: 30
+			},
+			768: {
+				items: 3,
+			},
+			992: {
+				items: 4
+			}
+		}
+	})
+}
 
+const homeSaleSliderMapping = () => {
+	Mapping.mapElements.from('.home-3 .tns-controls').to('.home-3 .tns-ovh').use('prependTo');
+}
 
 
 
