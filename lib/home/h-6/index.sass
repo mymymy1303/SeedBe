@@ -1,0 +1,41 @@
+.home-6
+	padding-bottom: rem(35px)
+	+media-breakpoint-up(lg)
+		padding-bottom: rem(72px)
+
+	a
+		text-decoration: none
+		&:hover
+			.box-zoom
+				img
+					transform: scale(1.2)
+
+	.blog
+		width: 18.125rem
+		margin-right: auto
+		margin-left: auto
+		margin-top: 1.5rem
+		+media-breakpoint-up(md)
+			width: 100%
+		.box-zoom
+			overflow: hidden
+			img
+				transition: .3s ease-in-out
+				max-width: 100%
+				height: auto
+		figcaption
+			padding-top: 1.5rem
+			.title
+				margin-bottom: .5rem
+				h1, h2, h3, h4, h5, h6
+					font-size: 1rem
+					line-height: 1.5rem
+					font-weight: 500
+					color: $den-1
+					text-transform: uppercase
+			.description
+				p
+					font-size: .875rem
+					line-height: 1.5rem
+					font-weight: 400
+					color: $xam-1

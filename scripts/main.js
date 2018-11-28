@@ -39,7 +39,7 @@ const theHuyApp = {
 		} else {
 			theHuyApp.toggle(el, a);
 		}
-	}, 
+	},
 	each: (s, f) => {
 		let es = theHuyApp.selectAll(s);
 		Array.prototype.forEach.call(es, f);
@@ -52,6 +52,8 @@ theHuyApp.ready(() => {
 	theHuyApp.avoidNull(homeBannerInit);
 	theHuyApp.avoidNull(homeSaleSliderInit);
 	theHuyApp.avoidNull(homeSaleSliderMapping);
+	theHuyApp.avoidNull(homeNewProductSliderInit);
+	theHuyApp.avoidNull(homeNewProductSliderMapping);
 })
 
 
@@ -61,7 +63,7 @@ const homeBannerInit = () => {
 		items: 1,
 		slideBy: 1,
 		nav: false,
-		controlsText: ["<span class='lnr lnr-chevron-left'></span>","<span class='lnr lnr-chevron-right'></span>"],
+		controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
 	})
 }
 
@@ -71,7 +73,29 @@ const homeSaleSliderInit = () => {
 		items: 1,
 		slideBy: 1,
 		nav: false,
-		controlsText: ["<span class='lnr lnr-chevron-left'></span>","<span class='lnr lnr-chevron-right'></span>"],
+		controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
+		responsive: {
+			576: {
+				items: 2,
+				gutter: 30
+			},
+			768: {
+				items: 3,
+			},
+			992: {
+				items: 4
+			}
+		}
+	})
+}
+
+const homeNewProductSliderInit = () => {
+	return tns({
+		container: '.home-product-slider',
+		items: 1,
+		slideBy: 1,
+		nav: false,
+		controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
 		responsive: {
 			576: {
 				items: 2,
@@ -88,7 +112,19 @@ const homeSaleSliderInit = () => {
 }
 
 const homeSaleSliderMapping = () => {
-	Mapping.mapElements.from('.home-3 .tns-controls').to('.home-3 .tns-ovh').use('prependTo');
+	try {
+		Mapping.mapElements.from('.home-3 .tns-controls').to('.home-3 .tns-ovh').use('prependTo');
+	} catch (error) {
+
+	}
+}
+
+const homeNewProductSliderMapping = () => {
+	try {
+		Mapping.mapElements.from('.home-5 .tns-controls').to('.home-5 .tns-ovh').use('prependTo');
+	} catch (error) {
+
+	}
 }
 
 

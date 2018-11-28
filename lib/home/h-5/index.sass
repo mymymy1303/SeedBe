@@ -1,0 +1,35 @@
+.home-5
+	padding-bottom: rem(35px)
+	+media-breakpoint-up(lg)
+		padding-bottom: rem(72px)
+	.tagline-1
+		margin-bottom: 1.5rem
+	.tns-ovh
+		position: relative
+		z-index: 1
+		.tns-controls
+			display: flex
+			justify-content: space-between
+			button
+				width: rem(50px)
+				height: rem(50px)
+				outline: none
+				border: 0
+				background-color: transparent
+				opacity: .5
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				z-index: 1
+				left: 0
+				transition: .3s ease-in-out
+				&:last-child
+					left: initial
+					right: 0
+				span
+					font-size: 1.5rem
+					color: #7e7e7e
+		&:hover
+			.tns-controls
+				button
+					opacity: 1
