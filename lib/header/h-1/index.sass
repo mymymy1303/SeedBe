@@ -1,11 +1,11 @@
 +media-breakpoint-down(md)
 	.canhcam-header-1
-		position: fixed
+		position: sticky
 		top: 0
 		left: 0
 		z-index: 9999
 		width: 100%
-		box-shadow: inset 0px -1px 0px 0px rgba(235,235,235,1)
+		// box-shadow: inset 0px -1px 0px 0px rgba(235,235,235,1)
 		padding-bottom: .5rem
 		background: #ffffff
 		.search-wrapper
@@ -124,6 +124,7 @@
 								transition: .3s ease-in-out
 								color: color-get($mau, main)
 			.side-nav
+				max-width: 100%
 				width: 100%
 				height: calc(100vh - 4.5rem)
 				overflow-y: auto
@@ -251,13 +252,13 @@
 +media-breakpoint-up(lg)
 	.canhcam-header-1
 		padding-top: 1.25rem
-		position: fixed
+		position: sticky
 		top: 0
 		left: 0
 		z-index: 9999
 		width: 100%
 		background: #ffffff
-		box-shadow: inset 0px -1px 0px 0px rgba(235,235,235,1)
+		// box-shadow: inset 0px -1px 0px 0px rgba(235,235,235,1)
 		.custom-nav
 			.tools-nav
 				margin-bottom: .85rem
@@ -312,15 +313,14 @@
 							background: color-get($mau, trang)
 							position: absolute
 							visibility: hidden
-							transform: rotateX(-180deg)
 							opacity: 0
 							transform-origin: center bottom
-							z-index: 1
+							z-index: -1
 							left: 0.9375rem
 							transition: all .3s linear
 							.megamenu-background
 								background-color: #ffffff
-								height: 100vh
+								height: calc(100vh - 6.25rem)
 								width: 200vw
 								position: absolute
 								left: -50vw
@@ -359,7 +359,7 @@
 								line-height: 4rem
 								&:before
 									position: absolute
-									content: 'hello'
+									content: ''
 									top: 0
 									left: 15px
 									z-index: 1

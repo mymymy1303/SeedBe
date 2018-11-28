@@ -1,0 +1,42 @@
+section.breadcrumb-1
+	width: 100%
+	height: rem(40px)
+	background-color: $trang
+	+media-breakpoint-down(md)
+		display: none
+	ol.breadcrumb
+		list-style: none
+		width: 100%
+		height: rem(40px)
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		margin: 0
+		padding: 0
+		background: #ffffff
+		li
+			margin-right: 1.75rem
+			position: relative
+			&:last-child
+				margin-right: 0
+			a
+				display: block
+				text-decoration: none
+				span
+					font-size: .75rem
+					font-weight: 400
+					color: #666666
+			&:after
+				position: absolute
+				content: "/"
+				font-size: 1rem
+				color: #666666
+				font-weight: 400
+				top: 0.05rem
+				right: -1.15rem
+			&:before
+				display: none
+			&:last-child
+				&:after
+					all: initial
+					display: none

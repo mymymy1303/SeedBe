@@ -54,6 +54,18 @@ theHuyApp.ready(() => {
 	theHuyApp.avoidNull(homeSaleSliderMapping);
 	theHuyApp.avoidNull(homeNewProductSliderInit);
 	theHuyApp.avoidNull(homeNewProductSliderMapping);
+
+	//About
+	theHuyApp.avoidNull(aboutNavMapping);
+	theHuyApp.avoidNull(aboutNavToggle);
+	
+	//Dichvuhotro
+	theHuyApp.avoidNull(dichvuhotroNavMapping);
+	theHuyApp.avoidNull(dichvuhotroNavToggle);
+
+	//Hoidap
+	theHuyApp.avoidNull(hoidapNavMapping);
+	theHuyApp.avoidNull(hoidapNavToggle);
 })
 
 
@@ -127,8 +139,68 @@ const homeNewProductSliderMapping = () => {
 	}
 }
 
+const aboutNavMapping = () => {
+	return new MappingListener({
+		selector: ".about-nav",
+		desktopWrapper: ".desktop-about-nav",
+		desktopMethod: "appendTo",
+		mobileWrapper: ".mobile-about-nav",
+		mobileMethod: "prependTo",
+		breakpoint: 992
+	}).watch()
+}
 
 
+const aboutNavToggle = () => {
+	$('.mobile-about-nav .mobile-toggle-button').on('click', function() {
+		$('.mobile-about-nav').toggleClass('active');
+	})
+	$('.mobile-about-nav .mobile-about-nav-backdrop').on('click', function() {
+		$('.mobile-about-nav').removeClass('active');
+	})
+}
+
+const dichvuhotroNavMapping = () => {
+	return new MappingListener({
+		selector: ".dichvuhotro-nav",
+		desktopWrapper: ".desktop-dichvuhotro-nav",
+		desktopMethod: "appendTo",
+		mobileWrapper: ".mobile-dichvuhotro-nav",
+		mobileMethod: "prependTo",
+		breakpoint: 992
+	}).watch()
+}
+
+
+const dichvuhotroNavToggle = () => {
+	$('.mobile-dichvuhotro-nav .mobile-toggle-button').on('click', function() {
+		$('.mobile-dichvuhotro-nav').toggleClass('active');
+	})
+	$('.mobile-dichvuhotro-nav .mobile-dichvuhotro-nav-backdrop').on('click', function() {
+		$('.mobile-dichvuhotro-nav').removeClass('active');
+	})
+}
+
+const hoidapNavMapping = () => {
+	return new MappingListener({
+		selector: ".hoidap-nav",
+		desktopWrapper: ".desktop-hoidap-nav",
+		desktopMethod: "appendTo",
+		mobileWrapper: ".mobile-hoidap-nav",
+		mobileMethod: "prependTo",
+		breakpoint: 992
+	}).watch()
+}
+
+
+const hoidapNavToggle = () => {
+	$('.mobile-hoidap-nav .mobile-toggle-button').on('click', function() {
+		$('.mobile-hoidap-nav').toggleClass('active');
+	})
+	$('.mobile-hoidap-nav .mobile-hoidap-nav-backdrop').on('click', function() {
+		$('.mobile-hoidap-nav').removeClass('active');
+	})
+}
 
 
 

@@ -8,6 +8,10 @@ html, body
 	line-height: 1.5
 	font-weight: 400
 	font-family: 'Quicksand', sans-serif
+	main
+		min-height: 500px
+html
+	overflow-x: hidden
 
 //Hamburger menu
 .hamburger
@@ -137,6 +141,27 @@ html, body
 				margin-right: rem(10px)
 			i, em
 				font-size: rem(14px)
+
+.tagline-2
+	display: flex
+	width: 100%
+	justify-content: space-between
+	align-items: center
+	.title
+		h1, h2, h3, h4, h5, h6
+			font-size: 1.5rem
+			font-weight: 400
+			color: #666666
+		position: relative
+		&:after
+			position: absolute
+			content: '...'
+			z-index: 1
+			text-align: left
+			font-size: 1.5rem
+			color: #666666
+			top: 1rem
+			line-height: 1.5rem
 
 .product
 	width: 100%

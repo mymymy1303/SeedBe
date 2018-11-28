@@ -1,15 +1,14 @@
 extends _layout/_layout.pug
 
 block var
-	- title = 'Demo - About'
+	- title = 'Demo - Thanh toán'
 	- bodyClass = 'about-page'
 
 block header
 	include ../lib/header/h-1/index.pug
 block main
-	p asdasd
-
-	h1 asdasdasd
-
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/banner/banner-2/index.pug
+	include ../lib/dichvuhotro/d-thanhtoan/index.pug
 block footer
 	include ../lib/footer/f-1/index.pug
