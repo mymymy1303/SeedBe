@@ -66,6 +66,12 @@ theHuyApp.ready(() => {
 	//Hoidap
 	theHuyApp.avoidNull(hoidapNavMapping);
 	theHuyApp.avoidNull(hoidapNavToggle);
+
+	//Thuvien
+	theHuyApp.avoidNull(galleryNavCollapsible);
+	theHuyApp.avoidNull(galleryNavMapping);
+	theHuyApp.avoidNull(galleryNavToggle);
+	theHuyApp.avoidNull(galleryInit);
 })
 
 
@@ -202,6 +208,58 @@ const hoidapNavToggle = () => {
 	})
 }
 
+const galleryNavCollapsible = () => {
+	try {
+		$('.gallery-nav i.lnr.lnr-chevron-down').on('click', function(e) {
+			
+			let currentParent = $(e.currentTarget).closest('.links');
+			let dropdown = $(currentParent).children(".sub-links");
+			let contentHeight = $(dropdown).height()
+			let currentParentHeight = $(currentParent).height()
+			if (currentParentHeight > contentHeight) {
+				$(currentParent).css('height', `${48/16}rem`)
+				$(currentParent).removeClass('gallery-nav-active')
+			} else {
+				currentParentHeight += contentHeight;
+				$('.gallery-nav .links').each(function(i, e) {
+					let element = $('.gallery-nav .links')[i];
+					$(element).removeClass('gallery-nav-active');
+					$(element).css('height', `${48/16}rem`)
+				})
+				$(currentParent).css('height', currentParentHeight).addClass('gallery-nav-active')
+			}
+		})
+	} catch (error) {
+		
+	}
+}
+
+const galleryNavMapping = () => {
+	return new MappingListener({
+		selector: ".gallery-nav",
+		desktopWrapper: ".desktop-gallery-nav",
+		desktopMethod: "appendTo",
+		mobileWrapper: ".mobile-gallery-nav",
+		mobileMethod: "prependTo",
+		breakpoint: 992
+	}).watch()
+}
+
+
+const galleryNavToggle = () => {
+	$('.mobile-gallery-nav .mobile-toggle-button').on('click', function() {
+		$('.mobile-gallery-nav').toggleClass('active');
+	})
+	$('.mobile-gallery-nav .mobile-gallery-nav-backdrop').on('click', function() {
+		$('.mobile-gallery-nav').removeClass('active');
+	})
+}
+
+const galleryInit = () => {
+	$(".g-image .images").lightGallery({
+		thumbnail: true
+	});
+}
 
 
 

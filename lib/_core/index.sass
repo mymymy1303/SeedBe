@@ -163,6 +163,28 @@ html
 			top: 1rem
 			line-height: 1.5rem
 
+
+.tagline-3
+	display: flex
+	width: 50%
+	justify-content: space-between
+	align-items: center
+	.title
+		h1, h2, h3, h4, h5, h6
+			font-size: 1.5rem
+			font-weight: 400
+			color: #666666
+		position: relative
+		&:after
+			position: absolute
+			content: '...'
+			z-index: 1
+			text-align: left
+			font-size: 1.5rem
+			color: #666666
+			top: 1rem
+			line-height: 1.5rem
+
 .product
 	width: 100%
 	background-color: #fdfdfd
@@ -303,3 +325,73 @@ html
 		figcaption
 			transform: scale(1)
 			opacity: 1
+
+//Pagination
+.modulepager
+	padding-bottom: 2rem
+	+media-breakpoint-up(lg)
+		padding-bottom: 3rem
+		padding-top: 1rem
+	ul.pagination
+		margin: 0
+		padding: 0
+		font-size: 0
+		+flex-center()
+		width: 100%
+		li
+			width: 2rem
+			height: 2rem
+			margin-right: .5rem
+			&:last-child
+				margin-right: 0
+			+flex-center()
+			font-size: .9375rem
+			color: #999999
+			background-color: #ebebeb
+			a, span
+				width: 2rem
+				height: 2rem
+				line-height: 2rem
+				text-align: center
+				font-size: .9375rem
+				color: #999999
+				text-decoration: none
+				&.NextPage
+					position: relative
+					&:before
+						position: absolute
+						content: '\e876'
+						font-family: 'Linearicons-Free'
+						text-align: center
+						width: 100%
+						height: 100%
+						left: 0
+						top: 0
+						font-size: .75rem
+				&.BackPage
+					position: relative
+					&:before
+						position: absolute
+						content: '\e875'
+						font-family: 'Linearicons-Free'
+						text-align: center
+						width: 100%
+						height: 100%
+						left: 0
+						top: 0
+						font-size: .75rem
+
+			&.active
+				background-color: #a8002a
+				color: #ffffff
+				a, span
+					color: #ffffff
+			+media-breakpoint-up(lg)
+				transition: .3s ease-in-out
+				a
+					transition: .3s ease-in-out
+				&:hover
+					background-color: #a8002a
+					color: #ffffff
+					a
+						color: #ffffff

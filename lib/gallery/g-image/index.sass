@@ -1,0 +1,203 @@
+section.g-image
+	padding: 2rem 0
+	+media-breakpoint-up(lg)
+		padding: 2rem 0
+
+	.tagline-3
+		display: inline-block
+		width: 50%
+		+media-breakpoint-down(sm)
+			.title
+				&:after
+					display: none
+
+	.sort
+		display: inline-block
+		width: 50%
+		text-align: right
+		select
+			background-size: auto !important
+			background-repeat: no-repeat !important
+			background-position-x: 90% !important
+			-webkit-appearance: none
+			-moz-appearance: none
+			width: fit-content
+			height: rem(28px)
+			line-height: rem(28px)
+			padding-left: 0.5rem
+			padding-right: 2rem
+			border: 0
+			outline: none
+			font-size: .875rem
+			color: #666666
+
+	.news-image
+		.images
+			margin-top: 2rem
+			a
+				display: none
+				overflow: hidden
+				&:first-child
+					display: block
+					position: relative
+					&:before
+						position: absolute
+						content: '\e827'
+						font-family: "Linearicons-Free"
+						font-size: 2rem
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
+						background-color: rgba(0, 0, 0, .75)
+						color: $trang
+						+flex-center()
+						opacity: 0
+						transition: .3s ease-in-out
+					&:hover
+						&:before
+							opacity: 1
+				img
+					max-width: 100%
+					height: auto
+					transition: .3s ease-in-out
+.desktop-gallery-nav
+	+media-breakpoint-down(md)
+		display: none
+
+.gallery-nav
+	.title
+		h1, h2, h3, h4, h5, h6
+			font-size: 1rem
+			font-weight: 700
+			color: $den-1
+			line-height: rem(36px)
+			text-transform: uppercase
+	.links
+		height: 3rem
+		overflow: hidden
+		transition: .3s ease-in-out
+		a
+			font-size: .875rem
+			font-weight: 500
+			color: $den-1
+			line-height: 3rem
+			text-decoration: none
+			display: flex
+			align-items: center
+			justify-content: space-between
+			position: relative
+			transition: .3s ease-in-out
+			&:before
+				position: absolute
+				content: ''
+				width: 100%
+				height: 1px
+				bottom: .3rem
+				left: 0
+				z-index: 1
+				background-color: #ebebeb
+			p
+				flex: 0 0 50%
+				max-width: 50%
+			i.lnr.lnr-chevron-down
+				flex: 0 0 50%
+				max-width: 50%
+				height: 3rem
+				text-align: right
+				line-height: 3rem
+				transition: .3s ease-in-out
+		.sub-links
+			a
+				display: block
+				font-size: .875rem
+				font-weight: 300
+				color: #666666
+				line-height: rem(28px)
+				&:before
+					all: initial
+				i.mdi.mdi-menu-right, em.mdi.mdi-menu-right
+					margin-right: .25rem
+				&.active
+					color: #000000
+					font-weight: 400
+
+		&.gallery-nav-active
+			height: fit-content
+			i.lnr.lnr-chevron-down
+				transform: rotateX(180deg)
+
+.mobile-gallery-nav
+	position: relative
+	.gallery-nav
+		width: 20rem
+		background: linear-gradient(315deg, #CFA35C 0%, #909B57 20%, #588B62 40%, #2E776C 60%, #246069 80%, #2F4858 100%)
+		padding: 1rem
+		height: calc(100vh - 4.5rem)
+		position: fixed
+		top: 4.5rem
+		z-index: 600
+		left: -20rem
+		transition: .5s ease-in-out
+		+media-breakpoint-up(sm)
+			height: calc(100vh - 6.125rem)
+			top: 6.125rem
+		+media-breakpoint-up(md)
+			height: calc(100vh - 7.125rem)
+			top: 7.125rem
+		.title
+			h1, h2, h3, h4, h5, h6
+				color: $trang
+		.links
+			a
+				color: $trang
+				&:after
+					color: $trang
+				&.active
+					font-weight: 500
+			.sub-links
+				a
+					&.active
+						font-weight: 400
+						color: $trang
+		
+
+	.mobile-gallery-nav-backdrop
+		width: calc(100vw - 20rem)
+		height: calc(100vh - 4.5rem)
+		position: fixed
+		z-index: 599
+		top: 4.5rem
+		right: -100vw
+		background-color: rgba(0, 0, 0, .75)
+		transition: .5s ease-in-out
+
+	.mobile-toggle-button
+		width: 2rem
+		height: 2.5rem
+		background-color: $main
+		color: $trang
+		position: fixed
+		font-size: 1rem
+		line-height: 2.5rem
+		text-align: right
+		padding-right: .25rem
+		top: 50%
+		left: 0
+		z-index: 601
+		border-radius: 0 1.25rem 1.25rem 0
+		transition: .5s ease-in-out
+		cursor: pointer
+		box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.1)
+
+	&.active
+		.gallery-nav
+			left: 0
+		.mobile-gallery-nav-backdrop
+			right: 0
+		.mobile-toggle-button
+			left: 18rem
+			transform: rotateY(-180deg)
+			background-color: rgba(0, 0, 0, .75)
+	+media-breakpoint-up(lg)
+		display: none
