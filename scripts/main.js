@@ -58,7 +58,7 @@ theHuyApp.ready(() => {
 	//About
 	theHuyApp.avoidNull(aboutNavMapping);
 	theHuyApp.avoidNull(aboutNavToggle);
-	
+
 	//Dichvuhotro
 	theHuyApp.avoidNull(dichvuhotroNavMapping);
 	theHuyApp.avoidNull(dichvuhotroNavToggle);
@@ -68,65 +68,82 @@ theHuyApp.ready(() => {
 	theHuyApp.avoidNull(hoidapNavToggle);
 
 	//Thuvien
+	theHuyApp.avoidNull(galleryNavCollapsibleInit);
 	theHuyApp.avoidNull(galleryNavCollapsible);
 	theHuyApp.avoidNull(galleryNavMapping);
 	theHuyApp.avoidNull(galleryNavToggle);
 	theHuyApp.avoidNull(galleryInit);
+
+	//Blogs
+	theHuyApp.avoidNull(sideBlogFormMapping);
+	theHuyApp.avoidNull(sideSocialFollowMapping);
 })
 
 
 const homeBannerInit = () => {
-	return tns({
-		container: '.banner-home',
-		items: 1,
-		slideBy: 1,
-		nav: false,
-		controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
-	})
+	try {
+		return tns({
+			container: '.banner-home',
+			items: 1,
+			slideBy: 1,
+			nav: false,
+			controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
+		})
+	} catch (error) {
+
+	}
 }
 
 const homeSaleSliderInit = () => {
-	return tns({
-		container: '.home-product-sale-slider',
-		items: 1,
-		slideBy: 1,
-		nav: false,
-		controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
-		responsive: {
-			576: {
-				items: 2,
-				gutter: 30
-			},
-			768: {
-				items: 3,
-			},
-			992: {
-				items: 4
+	try {
+		return tns({
+			container: '.home-product-sale-slider',
+			items: 1,
+			slideBy: 1,
+			nav: false,
+			controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
+			responsive: {
+				576: {
+					items: 2,
+					gutter: 30
+				},
+				768: {
+					items: 3,
+				},
+				992: {
+					items: 4
+				}
 			}
-		}
-	})
+		})
+	} catch (error) {
+
+	}
 }
 
 const homeNewProductSliderInit = () => {
-	return tns({
-		container: '.home-product-slider',
-		items: 1,
-		slideBy: 1,
-		nav: false,
-		controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
-		responsive: {
-			576: {
-				items: 2,
-				gutter: 30
-			},
-			768: {
-				items: 3,
-			},
-			992: {
-				items: 4
+	try {
+		return tns({
+			container: '.home-product-slider',
+			items: 1,
+			slideBy: 1,
+			nav: false,
+			controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
+			responsive: {
+				576: {
+					items: 2,
+					gutter: 30
+				},
+				768: {
+					items: 3,
+				},
+				992: {
+					items: 4
+				}
 			}
-		}
-	})
+		})
+	} catch (error) {
+
+	}
 }
 
 const homeSaleSliderMapping = () => {
@@ -146,111 +163,121 @@ const homeNewProductSliderMapping = () => {
 }
 
 const aboutNavMapping = () => {
-	return new MappingListener({
-		selector: ".about-nav",
-		desktopWrapper: ".desktop-about-nav",
-		desktopMethod: "appendTo",
-		mobileWrapper: ".mobile-about-nav",
-		mobileMethod: "prependTo",
-		breakpoint: 992
-	}).watch()
+	try {
+		return new MappingListener({
+			selector: ".about-nav",
+			desktopWrapper: ".desktop-about-nav",
+			desktopMethod: "appendTo",
+			mobileWrapper: ".mobile-about-nav",
+			mobileMethod: "prependTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
 }
 
 
 const aboutNavToggle = () => {
-	$('.mobile-about-nav .mobile-toggle-button').on('click', function() {
+	$('.mobile-about-nav .mobile-toggle-button').on('click', function () {
 		$('.mobile-about-nav').toggleClass('active');
 	})
-	$('.mobile-about-nav .mobile-about-nav-backdrop').on('click', function() {
+	$('.mobile-about-nav .mobile-about-nav-backdrop').on('click', function () {
 		$('.mobile-about-nav').removeClass('active');
 	})
 }
 
 const dichvuhotroNavMapping = () => {
-	return new MappingListener({
-		selector: ".dichvuhotro-nav",
-		desktopWrapper: ".desktop-dichvuhotro-nav",
-		desktopMethod: "appendTo",
-		mobileWrapper: ".mobile-dichvuhotro-nav",
-		mobileMethod: "prependTo",
-		breakpoint: 992
-	}).watch()
+	try {
+		return new MappingListener({
+			selector: ".dichvuhotro-nav",
+			desktopWrapper: ".desktop-dichvuhotro-nav",
+			desktopMethod: "appendTo",
+			mobileWrapper: ".mobile-dichvuhotro-nav",
+			mobileMethod: "prependTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
 }
 
 
 const dichvuhotroNavToggle = () => {
-	$('.mobile-dichvuhotro-nav .mobile-toggle-button').on('click', function() {
+	$('.mobile-dichvuhotro-nav .mobile-toggle-button').on('click', function () {
 		$('.mobile-dichvuhotro-nav').toggleClass('active');
 	})
-	$('.mobile-dichvuhotro-nav .mobile-dichvuhotro-nav-backdrop').on('click', function() {
+	$('.mobile-dichvuhotro-nav .mobile-dichvuhotro-nav-backdrop').on('click', function () {
 		$('.mobile-dichvuhotro-nav').removeClass('active');
 	})
 }
 
 const hoidapNavMapping = () => {
-	return new MappingListener({
-		selector: ".hoidap-nav",
-		desktopWrapper: ".desktop-hoidap-nav",
-		desktopMethod: "appendTo",
-		mobileWrapper: ".mobile-hoidap-nav",
-		mobileMethod: "prependTo",
-		breakpoint: 992
-	}).watch()
+	try {
+		return new MappingListener({
+			selector: ".hoidap-nav",
+			desktopWrapper: ".desktop-hoidap-nav",
+			desktopMethod: "appendTo",
+			mobileWrapper: ".mobile-hoidap-nav",
+			mobileMethod: "prependTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
 }
 
 
 const hoidapNavToggle = () => {
-	$('.mobile-hoidap-nav .mobile-toggle-button').on('click', function() {
+	$('.mobile-hoidap-nav .mobile-toggle-button').on('click', function () {
 		$('.mobile-hoidap-nav').toggleClass('active');
 	})
-	$('.mobile-hoidap-nav .mobile-hoidap-nav-backdrop').on('click', function() {
+	$('.mobile-hoidap-nav .mobile-hoidap-nav-backdrop').on('click', function () {
 		$('.mobile-hoidap-nav').removeClass('active');
 	})
 }
 
+const galleryNavCollapsibleInit = () => {
+	$('.gallery-nav .sub-links a.active').closest('.sub-links').slideDown(300);
+	$('.gallery-nav .sub-links a.active').closest('.links').addClass('gallery-nav-active');
+}
+
 const galleryNavCollapsible = () => {
 	try {
-		$('.gallery-nav i.lnr.lnr-chevron-down').on('click', function(e) {
-			
+		$('.gallery-nav i.lnr.lnr-chevron-down').on('click', function (e) {
+
 			let currentParent = $(e.currentTarget).closest('.links');
 			let dropdown = $(currentParent).children(".sub-links");
-			let contentHeight = $(dropdown).height()
-			let currentParentHeight = $(currentParent).height()
-			if (currentParentHeight > contentHeight) {
-				$(currentParent).css('height', `${48/16}rem`)
-				$(currentParent).removeClass('gallery-nav-active')
-			} else {
-				currentParentHeight += contentHeight;
-				$('.gallery-nav .links').each(function(i, e) {
-					let element = $('.gallery-nav .links')[i];
-					$(element).removeClass('gallery-nav-active');
-					$(element).css('height', `${48/16}rem`)
-				})
-				$(currentParent).css('height', currentParentHeight).addClass('gallery-nav-active')
-			}
+			$(dropdown).slideToggle(300)
+			$(currentParent).toggleClass('gallery-nav-active')
+
 		})
 	} catch (error) {
-		
+
 	}
 }
 
 const galleryNavMapping = () => {
-	return new MappingListener({
-		selector: ".gallery-nav",
-		desktopWrapper: ".desktop-gallery-nav",
-		desktopMethod: "appendTo",
-		mobileWrapper: ".mobile-gallery-nav",
-		mobileMethod: "prependTo",
-		breakpoint: 992
-	}).watch()
+	try {
+		return new MappingListener({
+			selector: ".gallery-nav",
+			desktopWrapper: ".desktop-gallery-nav",
+			desktopMethod: "appendTo",
+			mobileWrapper: ".mobile-gallery-nav",
+			mobileMethod: "prependTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
 }
 
 
 const galleryNavToggle = () => {
-	$('.mobile-gallery-nav .mobile-toggle-button').on('click', function() {
+	$('.mobile-gallery-nav .mobile-toggle-button').on('click', function () {
 		$('.mobile-gallery-nav').toggleClass('active');
 	})
-	$('.mobile-gallery-nav .mobile-gallery-nav-backdrop').on('click', function() {
+	$('.mobile-gallery-nav .mobile-gallery-nav-backdrop').on('click', function () {
 		$('.mobile-gallery-nav').removeClass('active');
 	})
 }
@@ -261,10 +288,36 @@ const galleryInit = () => {
 	});
 }
 
+const sideBlogFormMapping = () => {
+	try {
+		return new MappingListener({
+			selector: ".blog-form",
+			desktopWrapper: ".desktop-blog-form",
+			desktopMethod: "appendTo",
+			mobileWrapper: ".mobile-blog-form",
+			mobileMethod: "appendTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
+}
 
 
+const sideSocialFollowMapping = () => {
+	try {
+		return new MappingListener({
+			selector: ".social-follow",
+			desktopWrapper: ".desktop-social-follow",
+			desktopMethod: "appendTo",
+			mobileWrapper: ".mobile-social-follow",
+			mobileMethod: "appendTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
 
-
+	}
+}
 
 
 $(document).ready(function () {

@@ -74,8 +74,7 @@ section.g-image
 			line-height: rem(36px)
 			text-transform: uppercase
 	.links
-		height: 3rem
-		overflow: hidden
+		height: auto
 		transition: .3s ease-in-out
 		a
 			font-size: .875rem
@@ -85,7 +84,6 @@ section.g-image
 			text-decoration: none
 			display: flex
 			align-items: center
-			justify-content: space-between
 			position: relative
 			transition: .3s ease-in-out
 			&:before
@@ -108,8 +106,8 @@ section.g-image
 				line-height: 3rem
 				transition: .3s ease-in-out
 		.sub-links
+			display: none
 			a
-				display: block
 				font-size: .875rem
 				font-weight: 300
 				color: #666666
@@ -123,7 +121,6 @@ section.g-image
 					font-weight: 400
 
 		&.gallery-nav-active
-			height: fit-content
 			i.lnr.lnr-chevron-down
 				transform: rotateX(180deg)
 
@@ -151,12 +148,9 @@ section.g-image
 		.links
 			a
 				color: $trang
-				&:after
-					color: $trang
-				&.active
-					font-weight: 500
 			.sub-links
 				a
+					color: #bababa
 					&.active
 						font-weight: 400
 						color: $trang
