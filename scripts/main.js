@@ -77,6 +77,38 @@ theHuyApp.ready(() => {
 	//Blogs
 	theHuyApp.avoidNull(sideBlogFormMapping);
 	theHuyApp.avoidNull(sideSocialFollowMapping);
+	theHuyApp.avoidNull(storeSideBlogFormAndFollowsToMap);
+	theHuyApp.avoidNull(injectSideBlogFormAndFollowsToBlogDetails);
+
+	//Ytuongloikhuyen
+	theHuyApp.avoidNull(ideaNavCollapsibleInit);
+	theHuyApp.avoidNull(ideaNavCollapsible);
+	theHuyApp.avoidNull(ideaNavMapping);
+	theHuyApp.avoidNull(ideaNavToggle);
+	theHuyApp.avoidNull(ideaInit);
+	theHuyApp.avoidNull(sideYTuongSocialFollowMapping);
+	
+	//BST
+	theHuyApp.avoidNull(collectionNavMapping);
+	theHuyApp.avoidNull(collectionNavToggle);
+
+
+	//Filter
+	theHuyApp.avoidNull(filterNavMapping);
+	theHuyApp.avoidNull(filterNavToggle);
+	
+	//Filter init
+	let firstFilter = $('.filter').first();
+	firstFilter.children('.name').addClass('active');
+	firstFilter.children('.attributes').slideDown(300);
+	//Filter toggle
+	$('.filter .name').on('click', function (e) {
+		let filterParent = $(e.currentTarget).parents('.filter');
+		let currentAttributes = $(filterParent).children('.attributes');
+		$(e.currentTarget).toggleClass('active');
+		$(currentAttributes).slideToggle(300);
+	})
+
 })
 
 
@@ -291,7 +323,7 @@ const galleryInit = () => {
 const sideBlogFormMapping = () => {
 	try {
 		return new MappingListener({
-			selector: ".blog-form",
+			selector: ".blog-1 .blog-form",
 			desktopWrapper: ".desktop-blog-form",
 			desktopMethod: "appendTo",
 			mobileWrapper: ".mobile-blog-form",
@@ -307,7 +339,7 @@ const sideBlogFormMapping = () => {
 const sideSocialFollowMapping = () => {
 	try {
 		return new MappingListener({
-			selector: ".social-follow",
+			selector: ".blog-1 .social-follow",
 			desktopWrapper: ".desktop-social-follow",
 			desktopMethod: "appendTo",
 			mobileWrapper: ".mobile-social-follow",
@@ -317,6 +349,147 @@ const sideSocialFollowMapping = () => {
 	} catch (error) {
 
 	}
+}
+
+const ideaNavCollapsibleInit = () => {
+	$('.idea-nav .sub-links a.active').closest('.sub-links').slideDown(300);
+	$('.idea-nav .sub-links a.active').closest('.links').addClass('idea-nav-active');
+}
+
+const ideaNavCollapsible = () => {
+	try {
+		$('.idea-nav i.lnr.lnr-chevron-down').on('click', function (e) {
+
+			let currentParent = $(e.currentTarget).closest('.links');
+			let dropdown = $(currentParent).children(".sub-links");
+			$(dropdown).slideToggle(300)
+			$(currentParent).toggleClass('idea-nav-active')
+
+		})
+	} catch (error) {
+
+	}
+}
+
+const ideaNavMapping = () => {
+	try {
+		return new MappingListener({
+			selector: ".idea-nav",
+			desktopWrapper: ".desktop-idea-nav",
+			desktopMethod: "appendTo",
+			mobileWrapper: ".mobile-idea-nav",
+			mobileMethod: "prependTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
+}
+
+
+const ideaNavToggle = () => {
+	$('.mobile-idea-nav .mobile-toggle-button').on('click', function () {
+		$('.mobile-idea-nav').toggleClass('active');
+	})
+	$('.mobile-idea-nav .mobile-idea-nav-backdrop').on('click', function () {
+		$('.mobile-idea-nav').removeClass('active');
+	})
+}
+
+const ideaInit = () => {
+	$(".g-image .images").lightidea({
+		thumbnail: true
+	});
+}
+
+const sideYTuongSocialFollowMapping = () => {
+	try {
+		return new MappingListener({
+			selector: ".ytuong-social-follow",
+			desktopWrapper: ".desktop-ytuong-social-follow",
+			desktopMethod: "appendTo",
+			mobileWrapper: ".mobile-ytuong-social-follow",
+			mobileMethod: "appendTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
+}
+
+const storeSideBlogFormAndFollowsToMap = () => {
+	try {
+		let blogFormHtml = $('.blog-1 .blog-form').parent().html();
+		let blogFollowHtml = $('.blog-1 .social-follow').parent().html();
+		if (Cookies.get('blog_form_html') == null) {
+			Cookies.set('blog_form_html', blogFormHtml, { expires: 1 });
+		}
+		if (Cookies.get('blog_follow_html') == null) {
+			Cookies.set('blog_follow_html', blogFollowHtml, { expires: 1 });
+		}
+	} catch (error) {
+
+	}
+}
+
+const injectSideBlogFormAndFollowsToBlogDetails = () => {
+	try {
+		let currentSideBlogDetail = $('.side-blog-detail-wrapper').html();
+		currentSideBlogDetail = currentSideBlogDetail + Cookies.get('blog_form_html') + Cookies.get('blog_follow_html');
+		$('.side-blog-detail-wrapper').html(currentSideBlogDetail);
+	} catch (error) {
+
+	}
+}
+
+const collectionNavMapping = () => {
+	try {
+		return new MappingListener({
+			selector: ".collection-nav",
+			desktopWrapper: ".desktop-collection-nav",
+			desktopMethod: "prependTo",
+			mobileWrapper: ".mobile-collection-nav",
+			mobileMethod: "prependTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
+}
+
+
+const collectionNavToggle = () => {
+	$('.mobile-collection-nav .mobile-toggle-button').on('click', function () {
+		$('.mobile-collection-nav').toggleClass('active');
+	})
+	$('.mobile-collection-nav .mobile-collection-nav-backdrop').on('click', function () {
+		$('.mobile-collection-nav').removeClass('active');
+	})
+}
+
+const filterNavMapping = () => {
+	try {
+		return new MappingListener({
+			selector: ".filter-nav",
+			desktopWrapper: ".desktop-filter-nav",
+			desktopMethod: "prependTo",
+			mobileWrapper: ".mobile-filter-nav",
+			mobileMethod: "prependTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
+}
+
+
+const filterNavToggle = () => {
+	$('.mobile-filter-nav .mobile-toggle-button').on('click', function () {
+		$('.mobile-filter-nav').toggleClass('active');
+	})
+	$('.mobile-filter-nav .mobile-filter-nav-backdrop').on('click', function () {
+		$('.mobile-filter-nav').removeClass('active');
+	})
 }
 
 
@@ -362,12 +535,12 @@ $(document).ready(function () {
 	$('.main-nav-item.search-wrapper .searchbox').on('click', (e) => {
 		e.stopPropagation()
 	})
-	// $('.main-nav-item.cart-wrapper .cart-expand').on('click', (e) => {
-	// 	e.stopPropagation()
-	// })
-	// $('.main-nav-item.cart-wrapper .cart-close-button').on('click', (e) => {
-	// 	$(e.currentTarget).parent().parent().parent().removeClass('main-nav-item-active')
-	// })
+	$('.main-nav-item.cart-wrapper .cart-expand').on('click', (e) => {
+		e.stopPropagation()
+	})
+	$('.main-nav-item.cart-wrapper .cart-close-button').on('click', (e) => {
+		$(e.currentTarget).parent().parent().parent().removeClass('main-nav-item-active')
+	})
 
 
 	//Menu on resize
@@ -418,6 +591,15 @@ $(document).ready(function () {
 		breakpoint: 992
 	}).watch()
 
+	const cart_expand_mapping = new MappingListener({
+		selector: ".cart-expand",
+		mobileWrapper: ".side-cart-nav",
+		desktopWrapper: ".cart-wrapper",
+		mobileMethod: "appendTo",
+		desktopMethod: "appendTo",
+		breakpoint: 992
+	}).watch()
+
 	//Search mobile onclick
 	$('.mobile-search').on('click', (e) => {
 		$(e.currentTarget).toggleClass('active');
@@ -429,6 +611,15 @@ $(document).ready(function () {
 			$(e).not($(current_nav)).removeClass('active')
 		})
 		$(e.currentTarget).parent().parent().toggleClass('active')
+	})
+
+	
+
+	$('.mobile-cart').on('click', function() {
+		$('.side-cart-nav').toggleClass('active')
+	})
+	$('.side-cart-nav .cart-close-button').on('click', function() {
+		$('.side-cart-nav').removeClass('active')
 	})
 })
 

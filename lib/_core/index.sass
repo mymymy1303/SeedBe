@@ -185,6 +185,27 @@ html
 			top: 1rem
 			line-height: 1.5rem
 
+.tagline-4
+	width: 100%
+	.title
+		h1, h2, h3, h4, h5, h6
+			font-size: 1.5rem
+			font-weight: 400
+			color: #666666
+			text-align: center
+		position: relative
+		&:after
+			position: absolute
+			content: '...'
+			z-index: 1
+			text-align: left
+			font-size: 1.5rem
+			color: #666666
+			top: 1rem
+			left: 50%
+			transform: translateX(-50%)
+			line-height: 1.5rem
+
 .product
 	width: 100%
 	background-color: #fdfdfd
@@ -395,3 +416,140 @@ html
 					color: #ffffff
 					a
 						color: #ffffff
+
+
+.desktop-filter-nav
+	+media-breakpoint-down(md)
+		display: none
+.filter-nav
+	.title
+		h1, h2, h3, h4, h5, h6
+			font-size: 1rem
+			font-weight: 700
+			color: $den-1
+			line-height: rem(36px)
+			text-transform: uppercase
+	.filter
+		margin-bottom: .5rem
+		&:last-child
+			margin-bottom: 0
+		.name
+			text-decoration: none
+			display: flex
+			justify-content: space-between
+			align-items: center
+			color: #666666
+			font-size: .875rem
+			font-weight: 500
+			height: 2.25rem
+			line-height: 2.25rem
+			box-shadow: 0 1px 0 0 #dfdfdf
+			cursor: pointer
+			i, em
+				transition: .3s ease-in-out
+			&.active
+				i, em
+					transform: rotateX(180deg)
+		.attributes
+			display: none
+			margin-top: .5rem
+			box-shadow: 0 1px 0 0 #dfdfdf
+			padding-bottom: .75rem
+			a
+				display: block
+				color: #3f3f3f
+				font-size: rem(13px)
+				height: 1.5rem
+				line-height: 1.5rem
+				font-weight: 400
+				position: relative
+				padding-left: 3rem
+				text-decoration: none
+				transition: .3s ease-in-out
+				&:hover
+					color: #a8002a
+				&:after
+					position: absolute
+					content: ''
+					width: .625rem
+					height: .625rem
+					box-shadow: inset 0 0 0 1px #666666
+					top: 50%
+					left: 0
+					transform: translateY(-50%)
+
+.mobile-filter-nav
+	position: relative
+	.filter-nav
+		width: 20rem
+		background: linear-gradient(315deg, #843838 0%, #7B3850 20%, #673E60 40%, #4E4467 60%, #394763 80%, #2F4858 100%)
+		padding: 1rem
+		background-color: pink
+		height: calc(100vh - 4.5rem)
+		position: fixed
+		top: 4.5rem
+		z-index: 600
+		left: -20rem
+		overflow-y: auto
+		transition: .5s ease-in-out
+		+media-breakpoint-up(sm)
+			height: calc(100vh - 6.125rem)
+			top: 6.125rem
+		+media-breakpoint-up(md)
+			height: calc(100vh - 7.125rem)
+			top: 7.125rem
+		.title
+			h1, h2, h3, h4, h5, h6
+				color: $trang
+		.filter
+			.name
+				color: $trang
+			.attributes
+				a
+					color: $trang
+					padding-left: 3rem
+					&:after
+						box-shadow: inset 0 0 0 1px $trang
+		
+
+	.mobile-filter-nav-backdrop
+		width: calc(100vw - 20rem)
+		height: calc(100vh - 4.5rem)
+		position: fixed
+		z-index: 599
+		top: 4.5rem
+		right: -100vw
+		background-color: rgba(0, 0, 0, .75)
+		transition: .5s ease-in-out
+
+	.mobile-toggle-button
+		width: 3rem
+		height: 2.75rem
+		background-color: #a8002a
+		color: $trang
+		position: fixed
+		font-size: 1rem
+		line-height: 3rem
+		text-align: center
+		padding-right: .25rem
+		top: calc((100% + 7rem)/2)
+		left: 0
+		z-index: 601
+		border-radius: 0 1.375rem 1.375rem 0
+		transition: .5s ease-in-out
+		cursor: pointer
+		box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.1)
+
+	&.active
+		.filter-nav
+			left: 0
+			z-index: 900
+		.mobile-filter-nav-backdrop
+			right: 0
+		.mobile-toggle-button
+			left: 17rem
+			transform: rotateY(-180deg)
+			background-color: rgba(0, 0, 0, .75)
+			z-index: 901
+	+media-breakpoint-up(lg)
+		display: none

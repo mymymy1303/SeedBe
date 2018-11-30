@@ -20,6 +20,7 @@
 		"plugins/bigimg.js",
 		"plugins/mapping.js",
 		"plugins/mapping-listener.js",
-		"bower_components/lightgallery/dist/js/lightgallery-all.min.js"
+		"bower_components/lightgallery/dist/js/lightgallery-all.min.js",
+		"node_modules/js-cookie/src/js.cookie.js"
 	]
 }

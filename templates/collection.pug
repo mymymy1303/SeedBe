@@ -1,0 +1,15 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'Demo - Collection'
+	- bodyClass = 'about-page'
+
+block header
+	include ../lib/header/h-1/index.pug
+block main
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/banner/banner-2/index.pug
+	include ../lib/collection/c-1/index.pug
+	include ../lib/collection/c-2/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug

@@ -249,6 +249,158 @@
 				&.side-nav-active
 					left: 50%
 					transform: translateX(-50%)
+
+			.side-cart-nav
+				position: fixed
+				width: 100vw
+				background: pink
+				right: 100vw
+				top: 0
+				height: 100vh
+				transition: .3s ease-in-out
+				.cart-expand
+					background-color: #ffffff
+					transition: .3s ease-in-out
+					height: 100vh
+					.cart-header
+						background: linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
+						color: #ffffff
+						display: flex
+						justify-content: space-between
+						align-items: center
+						padding-right: 1rem
+						padding-left: 1rem
+						.cart-title
+							height: 3rem
+							line-height: 3rem
+							font-size: .85rem
+							font-weight: 400
+							text-transform: uppercase
+							span
+								font-weight: 700
+						.cart-close-button
+							font-size: 1rem
+							cursor: pointer
+					.cart-list
+						height: calc(100vh - 9rem)
+						overflow-x: auto
+						&::-webkit-scrollbar
+							width: rem(3px)
+
+						&::-webkit-scrollbar-track
+							background: $trang
+
+						&::-webkit-scrollbar-thumb
+							background: #a8002a
+						.item
+							display: flex
+							justify-content: center
+							align-items: center
+							flex-wrap: wrap
+							height: 5rem
+							width: 100%
+							margin-top: 1rem
+							margin-bottom: 1rem
+							position: relative
+							&:after
+								position: absolute
+								content: ''
+								width: calc(100% - 2rem)
+								height: 1px
+								background-color: #ebebeb
+								bottom: -0.25rem
+								left: 1rem
+							&:last-child
+								margin-bottom: 0
+							.item-image
+								margin-right: .5rem
+								margin-left: .5rem
+								height: 100%
+								flex: 0 0 calc(30% - 1rem)
+								max-width: calc(30% - 1rem)
+								display: flex
+								justify-content: center
+								align-items: center
+								img
+									width: auto
+									height: 100%
+							.item-content
+								margin-right: .5rem
+								margin-left: .5rem
+								height: 100%
+								flex: 0 0 calc(60% - 1rem)
+								max-width: calc(60% - 1rem)
+								display: flex
+								justify-content: center
+								align-items: flex-start
+								flex-direction: column
+								.item-title
+									a
+										font-size: .875rem
+										text-transform: uppercase
+										font-weight: 700
+										color: #333333
+										text-decoration: none
+										transition: .3s ease-in-out
+										&:active, &:focus, &:hover
+											color: #cfa35c
+								.item-amount
+									color: #333333
+									font-size: 1rem
+							.item-remove-button
+								cursor: pointer
+								margin-right: .5rem
+								margin-left: .5rem
+								height: 100%
+								flex: 0 0 calc(10% - 1rem)
+								max-width: calc(10% - 1rem)
+								display: flex
+								justify-content: flex-end
+								align-items: center
+								i, em
+									margin-right: .5rem
+
+					.cart-checkout
+						.cart-total
+							padding-right: 1rem
+							padding-left: 1rem
+							text-align: right
+							height: 3rem
+							line-height: 3rem
+							font-size: .875rem
+							color: #333333
+							span
+								color: #a8002a
+								font-size: 1.25rem
+								font-weight: 700
+						.cart-button
+							background: -moz-linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
+							background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(210,169,103,1)), color-stop(20%, rgba(169,161,80,1)), color-stop(40%, rgba(122,152,70,1)), color-stop(60%, rgba(66,141,71,1)), color-stop(80%, rgba(0,129,82,1)), color-stop(100%, rgba(0,114,98,1)))
+							background: -webkit-linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
+							background: -o-linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
+							background: -ms-linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
+							background: linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
+							height: 3rem
+							line-height: 3rem
+							text-align: center
+							a
+								display: block
+								height: 100%
+								width: 100%
+								position: relative
+								font-size: .875rem
+								text-decoration: none
+								font-weight: 700
+								color: #ffffff
+								letter-spacing: .5px
+								&:before
+									content: '\f07a'
+									font-family: 'Font Awesome 5 Free'
+									margin-right: 5px
+									color: #fff
+									font-weight: 900
+				&.active
+					right: 0
 +media-breakpoint-up(lg)
 	.canhcam-header-1
 		padding-top: 1.25rem
@@ -515,6 +667,7 @@
 								color: #ffffff
 								font-size: .75rem
 						.cart-expand
+							background-color: #ffffff
 							position: absolute
 							width: 25rem
 							right: 0
@@ -527,11 +680,6 @@
 							z-index: 1
 							transition: .3s ease-in-out
 							.cart-header
-								background: -moz-linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
-								background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(210,169,103,1)), color-stop(20%, rgba(169,161,80,1)), color-stop(40%, rgba(122,152,70,1)), color-stop(60%, rgba(66,141,71,1)), color-stop(80%, rgba(0,129,82,1)), color-stop(100%, rgba(0,114,98,1)))
-								background: -webkit-linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
-								background: -o-linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
-								background: -ms-linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
 								background: linear-gradient(45deg, rgba(210,169,103,1) 0%, rgba(169,161,80,1) 20%, rgba(122,152,70,1) 40%, rgba(66,141,71,1) 60%, rgba(0,129,82,1) 80%, rgba(0,114,98,1) 100%)
 								color: #ffffff
 								display: flex
@@ -551,6 +699,16 @@
 									font-size: 1rem
 									cursor: pointer
 							.cart-list
+								height: rem(292px)
+								overflow-x: auto
+								&::-webkit-scrollbar
+									width: rem(3px)
+
+								&::-webkit-scrollbar-track
+									background: $trang
+
+								&::-webkit-scrollbar-thumb
+									background: #a8002a
 								.item
 									display: flex
 									justify-content: center

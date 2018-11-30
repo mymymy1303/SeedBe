@@ -1,0 +1,262 @@
+section.ytuong-1
+	padding: 2rem 0
+	.ytuong-social-follow
+		+media-breakpoint-down(md)
+			display: flex
+			justify-content: space-between
+			align-items: center
+		a
+			display: block
+			text-decoration: none
+			width: 100%
+			padding-top: 100%
+			position: relative
+			margin-top: rem(40px)
+			+media-breakpoint-down(md)
+				max-width: calc(100% - .9375rem)
+				margin-right: .9375rem
+				padding-top: calc((100% - .9375rem)/2)
+				&:last-child
+					margin-right: 0
+			&:hover
+				img
+					transform: scale(1.2)
+			figure
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 1
+				.box-zoom
+					position: relative
+					overflow: hidden
+					img
+						max-width: 100%
+						height: auto
+						transition: .3s ease-in-out
+				figcaption
+					background-color: #843838
+					position: absolute
+					width: 100%
+					height: rem(40px)
+					bottom: rem(-40px)
+					left: 0
+					.title
+						h1, h2, h3, h4, h5, h6
+							color: $trang
+							font-size: .875rem
+							font-weight: 400
+							text-transform: uppercase
+							line-height: rem(40px)
+							text-align: center
+							margin-top: -1px
+							margin-right: -1px
+							+media-breakpoint-down(md)
+								font-size: .75rem
+
+	.tagline-3
+		width: 100%
+		height: auto
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		.social-share
+			margin-top: 1.5rem
+		+media-breakpoint-up(lg)
+			flex-direction: row
+			justify-content: space-between
+			.social-share
+				margin-top: 0
+	.faq
+		.separator
+			width: 100%
+			height: 1px
+			background-color: #f1f1f1
+			margin-top: 2rem
+			margin-bottom: 2rem
+		margin-top: 2rem
+		img
+			max-width: 100%
+			height: auto
+		.ask
+			margin-top: 2rem
+			display: flex
+			flex-direction: column
+			+media-breakpoint-up(lg)
+				flex-direction: row
+				justify-content: space-between
+			.title
+				color: #3f3f3f
+				font-weight: 300
+				font-size: 2rem
+				+media-breakpoint-up(lg)
+					vertical-align: top
+					flex: 0 0 10%
+					max-width: 10%
+			.content
+				color: #1c1c1c
+				font-weight: 400
+				font-size: rem(13px)
+				line-height: 1.5rem
+				+media-breakpoint-up(lg)
+					flex: 0 0 80%
+					max-width: 80%
+		.answer
+			margin-top: 2rem
+			display: flex
+			flex-direction: column
+			+media-breakpoint-up(lg)
+				flex-direction: row
+				justify-content: space-between
+			.title
+				color: #3f3f3f
+				font-weight: 300
+				font-size: 2rem
+				+media-breakpoint-up(lg)
+					vertical-align: top
+					flex: 0 0 10%
+					max-width: 10%
+			.content
+				color: #1c1c1c
+				font-weight: 400
+				font-size: rem(13px)
+				line-height: 1.5rem
+				+media-breakpoint-up(lg)
+					flex: 0 0 80%
+					max-width: 80%
+
+
+.desktop-idea-nav
+	+media-breakpoint-down(md)
+		display: none
+
+.idea-nav
+	.title
+		h1, h2, h3, h4, h5, h6
+			font-size: 1rem
+			font-weight: 700
+			color: $den-1
+			line-height: rem(36px)
+			text-transform: uppercase
+	.links
+		height: auto
+		transition: .3s ease-in-out
+		a
+			font-size: .875rem
+			font-weight: 500
+			color: $den-1
+			line-height: 3rem
+			text-decoration: none
+			display: flex
+			align-items: center
+			position: relative
+			transition: .3s ease-in-out
+			&:before
+				position: absolute
+				content: ''
+				width: 100%
+				height: 1px
+				bottom: .3rem
+				left: 0
+				z-index: 1
+				background-color: #ebebeb
+			p
+				flex: 0 0 70%
+				max-width: 70%
+			i.lnr.lnr-chevron-down
+				flex: 0 0 30%
+				max-width: 30%
+				height: 3rem
+				text-align: right
+				line-height: 3rem
+				transition: .3s ease-in-out
+		.sub-links
+			display: none
+			a
+				font-size: .875rem
+				font-weight: 300
+				color: #666666
+				line-height: rem(28px)
+				&:before
+					all: initial
+				i.mdi.mdi-menu-right, em.mdi.mdi-menu-right
+					margin-right: .25rem
+				&.active
+					color: #000000
+					font-weight: 400
+
+		&.idea-nav-active
+			i.lnr.lnr-chevron-down
+				transform: rotateX(180deg)
+
+.mobile-idea-nav
+	position: relative
+	.idea-nav
+		width: 20rem
+		background: linear-gradient(315deg, #843838 0%, #7B3850 20%, #673E60 40%, #4E4467 60%, #394763 80%, #2F4858 100%)
+		padding: 1rem
+		height: calc(100vh - 4.5rem)
+		position: fixed
+		top: 4.5rem
+		z-index: 600
+		left: -20rem
+		overflow-y: auto
+		transition: .5s ease-in-out
+		+media-breakpoint-up(sm)
+			height: calc(100vh - 6.125rem)
+			top: 6.125rem
+		+media-breakpoint-up(md)
+			height: calc(100vh - 7.125rem)
+			top: 7.125rem
+		.title
+			h1, h2, h3, h4, h5, h6
+				color: $trang
+		.links
+			a
+				color: $trang
+			.sub-links
+				a
+					color: #bababa
+					&.active
+						font-weight: 400
+						color: $trang
+		
+
+	.mobile-idea-nav-backdrop
+		width: calc(100vw - 20rem)
+		height: calc(100vh - 4.5rem)
+		position: fixed
+		z-index: 599
+		top: 4.5rem
+		right: -100vw
+		background-color: rgba(0, 0, 0, .75)
+		transition: .5s ease-in-out
+
+	.mobile-toggle-button
+		width: 2rem
+		height: 2.5rem
+		background-color: $main
+		color: $trang
+		position: fixed
+		font-size: 1rem
+		line-height: 2.5rem
+		text-align: right
+		padding-right: .25rem
+		top: 50%
+		left: 0
+		z-index: 601
+		border-radius: 0 1.25rem 1.25rem 0
+		transition: .5s ease-in-out
+		cursor: pointer
+		box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.1)
+
+	&.active
+		.idea-nav
+			left: 0
+		.mobile-idea-nav-backdrop
+			right: 0
+		.mobile-toggle-button
+			left: 18rem
+			transform: rotateY(-180deg)
+			background-color: rgba(0, 0, 0, .75)
+	+media-breakpoint-up(lg)
+		display: none
