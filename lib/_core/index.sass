@@ -131,6 +131,7 @@ html
 			color: #666666
 			top: .5rem
 			line-height: 1.5rem
+			letter-spacing: 3px
 	.link
 		a
 			+flex-center()
@@ -162,6 +163,7 @@ html
 			color: #666666
 			top: 1rem
 			line-height: 1.5rem
+			letter-spacing: 3px
 
 
 .tagline-3
@@ -184,6 +186,7 @@ html
 			color: #666666
 			top: 1rem
 			line-height: 1.5rem
+			letter-spacing: 3px
 
 .tagline-4
 	width: 100%
@@ -205,6 +208,29 @@ html
 			left: 50%
 			transform: translateX(-50%)
 			line-height: 1.5rem
+			letter-spacing: 3px
+
+.tagline-5
+	display: flex
+	width: 50%
+	justify-content: flex-start
+	align-items: center
+	.title
+		h1, h2, h3, h4, h5, h6
+			font-size: 1.5rem
+			font-weight: 400
+			color: #666666
+		position: relative
+		&:after
+			position: absolute
+			content: '...'
+			z-index: 1
+			text-align: left
+			font-size: 1.5rem
+			color: #666666
+			top: 1rem
+			line-height: 1.5rem
+			letter-spacing: 3px
 
 .product
 	width: 100%
@@ -287,6 +313,32 @@ html
 				text-align: center
 				line-height: 2.5rem
 				border-radius: (1.25rem)
+				@media (max-width: 500px)
+					width: 80%
+					margin-left: auto
+					margin-right: auto
+					&:first-child
+						font-size: 0
+						position: relative
+						&:before
+							position: absolute
+							content: '\f217'
+							font-family: 'Font Awesome 5 Free'
+							font-weight: 900
+							font-size: 1rem
+							left: 50%
+							transform: translateX(-50%)
+					&:last-child
+						font-size: 0
+						position: relative
+						&:before
+							position: absolute
+							content: "\f129"
+							font-family: 'Font Awesome 5 Free'
+							font-weight: 900
+							font-size: 1rem
+							left: 50%
+							transform: translateX(-50%)
 				+media-breakpoint-up(sm)
 					width: 80%
 				&:first-child
@@ -421,6 +473,7 @@ html
 .desktop-filter-nav
 	+media-breakpoint-down(md)
 		display: none
+
 .filter-nav
 	.title
 		h1, h2, h3, h4, h5, h6
@@ -477,6 +530,69 @@ html
 					top: 50%
 					left: 0
 					transform: translateY(-50%)
+				&.active
+					color: #a8002a
+					font-weight: 500
+					&:before
+						position: absolute
+						content: '\f00c'
+						font-family: "Font Awesome 5 Free"
+						font-weight: 900
+						color: #333333
+						left: 0
+						top: 0
+						font-size: .55rem
+
+		&.filter-color
+			.attributes
+				width: 100%
+				a
+					all: initial
+					display: inline-block
+					width: calc((100% - 5rem) / 5)
+					height: 1.5rem
+					margin-right: 1.25rem
+					background-color: yellow
+					cursor: pointer
+					box-shadow: inset 0 0 0 1px #000000
+					margin-top: .875rem
+					&:nth-child(5n)
+						margin-right: 0
+					&:after
+						all: initial
+					&.active
+						&:before
+							all: initial
+		
+		&.filter-size
+			.attributes
+				width: 100%
+				margin-top: 0
+				.title
+					margin-top: .5rem
+					p
+						color: #3f3f3f
+						font-size: rem(13px)
+						line-height: 1.5rem
+				input
+					display: inline-block
+					border: 0
+					outline: none
+					font-size: .75rem
+					color: #3f3f3f
+					height: 1.875rem
+					padding-left: 0.5rem
+					width: 70%
+					box-shadow: inset 0 0 0 1px #cccccc
+					text-align: left
+				.unit
+					display: inline-block
+					width: 30%
+					font-size: rem(13px)
+					line-height: 1.5rem
+					color: #3f3f3f
+					text-align: right
+
 
 .mobile-filter-nav
 	position: relative
@@ -510,6 +626,35 @@ html
 					padding-left: 3rem
 					&:after
 						box-shadow: inset 0 0 0 1px $trang
+					&.active
+						font-weight: 500
+						&:before
+							position: absolute
+							content: '\f00c'
+							font-family: "Font Awesome 5 Free"
+							font-weight: 900
+							color: #ffffff
+							left: 0
+							top: 0
+							font-size: .55rem
+			&.filter-color
+				.attributes
+					a
+						padding-left: 0
+						&:after
+							all: initial
+						&.active
+							all: initial
+							&:before
+								all: initial
+			&.filter-size
+				.title
+					p
+						color: $trang
+				.unit
+					p
+						color: $trang
+
 		
 
 	.mobile-filter-nav-backdrop
@@ -553,3 +698,27 @@ html
 			z-index: 901
 	+media-breakpoint-up(lg)
 		display: none
+
+.product-detail-slider
+	.swiper-container
+		&.slider
+			.swiper-wrapper
+				.swiper-slide
+					position: relative
+					padding: 2rem
+					background-color: pink
+					img
+						max-width: 100%
+						height: auto
+		&.thumbnail
+			.swiper-wrapper
+				.swiper-slide
+					cursor: pointer
+					opacity: .5
+					position: relative
+					transition: .3s ease-in-out
+					img
+						max-width: 100%
+						height: auto
+				.swiper-slide-thumb-active
+					opacity: 1

@@ -87,16 +87,55 @@ theHuyApp.ready(() => {
 	theHuyApp.avoidNull(ideaNavToggle);
 	theHuyApp.avoidNull(ideaInit);
 	theHuyApp.avoidNull(sideYTuongSocialFollowMapping);
-	
+
 	//BST
 	theHuyApp.avoidNull(collectionNavMapping);
 	theHuyApp.avoidNull(collectionNavToggle);
 
 
+	//Product
+	theHuyApp.avoidNull(productNavMapping);
+	theHuyApp.avoidNull(productNavToggle);
+
+	//Sales
+	theHuyApp.avoidNull(salesNavMapping);
+	theHuyApp.avoidNull(salesNavToggle);
+
+	//BST CT
+
+	try {
+		const productDetailThumbnailInit = new Swiper('.product-detail-slider .thumbnail', {
+			spaceBetween: 60,
+			slidesPerView: 3,
+			freeMode: true,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			breakpoints: {
+				576: {
+					spaceBetween: 10
+				}
+			}
+		});
+
+		const productDetailSliderInit = new Swiper('.product-detail-slider .slider', {
+			spaceBetween: 0,
+			// navigation: {
+			// 	nextEl: '.swiper-button-next',
+			// 	prevEl: '.swiper-button-prev',
+			// },
+			thumbs: {
+				swiper: productDetailThumbnailInit
+			}
+		});
+	} catch (error) {
+
+	}
+
+
 	//Filter
 	theHuyApp.avoidNull(filterNavMapping);
 	theHuyApp.avoidNull(filterNavToggle);
-	
+
 	//Filter init
 	let firstFilter = $('.filter').first();
 	firstFilter.children('.name').addClass('active');
@@ -421,10 +460,10 @@ const storeSideBlogFormAndFollowsToMap = () => {
 	try {
 		let blogFormHtml = $('.blog-1 .blog-form').parent().html();
 		let blogFollowHtml = $('.blog-1 .social-follow').parent().html();
-		if (Cookies.get('blog_form_html') == null) {
+		if (Cookies.get('blog_form_html') == null || Cookies.get('blog_form_html') == "undefined") {
 			Cookies.set('blog_form_html', blogFormHtml, { expires: 1 });
 		}
-		if (Cookies.get('blog_follow_html') == null) {
+		if (Cookies.get('blog_follow_html') == null || Cookies.get('blog_follow_html') == "undefined") {
 			Cookies.set('blog_follow_html', blogFollowHtml, { expires: 1 });
 		}
 	} catch (error) {
@@ -466,6 +505,82 @@ const collectionNavToggle = () => {
 		$('.mobile-collection-nav').removeClass('active');
 	})
 }
+
+const productNavMapping = () => {
+	try {
+		return new MappingListener({
+			selector: ".product-nav",
+			desktopWrapper: ".desktop-product-nav",
+			desktopMethod: "prependTo",
+			mobileWrapper: ".mobile-product-nav",
+			mobileMethod: "prependTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
+}
+
+
+const productNavToggle = () => {
+	$('.mobile-product-nav .mobile-toggle-button').on('click', function () {
+		$('.mobile-product-nav').toggleClass('active');
+	})
+	$('.mobile-product-nav .mobile-product-nav-backdrop').on('click', function () {
+		$('.mobile-product-nav').removeClass('active');
+	})
+}
+
+const salesNavMapping = () => {
+	try {
+		return new MappingListener({
+			selector: ".sales-nav",
+			desktopWrapper: ".desktop-sales-nav",
+			desktopMethod: "prependTo",
+			mobileWrapper: ".mobile-sales-nav",
+			mobileMethod: "prependTo",
+			breakpoint: 992
+		}).watch()
+	} catch (error) {
+
+	}
+}
+
+
+const salesNavToggle = () => {
+	$('.mobile-sales-nav .mobile-toggle-button').on('click', function () {
+		$('.mobile-sales-nav').toggleClass('active');
+	})
+	$('.mobile-sales-nav .mobile-sales-nav-backdrop').on('click', function () {
+		$('.mobile-sales-nav').removeClass('active');
+	})
+}
+
+// const productDetailSliderInit = () => {
+// 	return tns({
+// 		container: '.product-detail-slider .slider',
+// 		items: 1,
+// 		slideBy: 'page',
+// 		controls: true,
+// 		controlsText: ["<span class='lnr lnr-arrow-left'></span>", "<span class='lnr lnr-arrow-right'></span>"],
+// 		navContainer: ".product-detail-slider .thumbnail",
+// 		navAsThumbnails: true,
+// 		loop: false
+// 	});
+// }
+
+// const productDetailThumbnailInit = () => {
+// 	return tns({
+// 		container: '.product-detail-slider .thumbnail',
+// 		items: 3,
+// 		slideBy: 1,
+// 		controls: false,
+// 		controlsText: ["<span class='lnr lnr-arrow-left'></span>", "<span class='lnr lnr-arrow-right'></span>"],
+// 		navContainer: ".product-detail-slider .slider",
+// 		navAsThumbnails: true,
+// 		loop: false
+// 	});
+// }
 
 const filterNavMapping = () => {
 	try {
@@ -613,12 +728,12 @@ $(document).ready(function () {
 		$(e.currentTarget).parent().parent().toggleClass('active')
 	})
 
-	
 
-	$('.mobile-cart').on('click', function() {
+
+	$('.mobile-cart').on('click', function () {
 		$('.side-cart-nav').toggleClass('active')
 	})
-	$('.side-cart-nav .cart-close-button').on('click', function() {
+	$('.side-cart-nav .cart-close-button').on('click', function () {
 		$('.side-cart-nav').removeClass('active')
 	})
 })

@@ -9,7 +9,8 @@
 		"bower_components/offline/themes/offline-theme-default.css",
 		"bower_components/offline/themes/offline-language-english.css",
 		"bower_components/tiny-slider/dist/tiny-slider.css",
-		"bower_components/lightgallery/dist/css/lightgallery.min.css"
+		"bower_components/lightgallery/dist/css/lightgallery.min.css",
+		"bower_components/swiper/dist/css/swiper.min.css"
 	],
 	"scripts":[
 		"bower_components/jquery/dist/jquery.min.js",
@@ -21,6 +22,7 @@
 		"plugins/mapping.js",
 		"plugins/mapping-listener.js",
 		"bower_components/lightgallery/dist/js/lightgallery-all.min.js",
-		"node_modules/js-cookie/src/js.cookie.js"
+		"node_modules/js-cookie/src/js.cookie.js",
+		"bower_components/swiper/dist/js/swiper.min.js"
 	]
 }

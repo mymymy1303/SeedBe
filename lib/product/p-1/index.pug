@@ -1,0 +1,155 @@
+section.product-1
+	.container
+		.row
+			.col-lg-3
+				.desktop-product-nav
+					.product-nav
+						.title
+							h2 media &amp; storage
+						.links
+							a(href="javascript:void(0)").active Kệ tivi
+							a(href="javascript:void(0)") Kệ sách + Trang trí
+							a(href="javascript:void(0)") Tủ kệ phòng ngủ
+							a(href="javascript:void(0)") Tủ giày
+				.desktop-filter-nav
+					.filter-nav
+						.title
+							h2 chọn lọc theo
+						.filter
+							.name
+								span Số người sử dụng
+								i.lnr.lnr-chevron-down
+							.attributes
+								a(href="javascript:void(0)").active Cổ điển
+								a(href="javascript:void(0)") Hiện đại
+								a(href="javascript:void(0)") Retrol
+								a(href="javascript:void(0)") Scandinavi
+								a(href="javascript:void(0)") Industrial
+								a(href="javascript:void(0)") Metropolitan
+								a(href="javascript:void(0)") Urban
+						.filter.filter-color
+							.name
+								span Màu sắc
+								i.lnr.lnr-chevron-down
+							.attributes
+								a(href="javascript:void(0)")
+								a(href="javascript:void(0)")
+								a(href="javascript:void(0)")
+								a(href="javascript:void(0)")
+								a(href="javascript:void(0)")
+								a(href="javascript:void(0)")
+								a(href="javascript:void(0)")
+								a(href="javascript:void(0)")
+								a(href="javascript:void(0)")
+								a(href="javascript:void(0)")
+						.filter
+							.name
+								span Vật liệu
+								i.lnr.lnr-chevron-down
+							.attributes
+								a(href="javascript:void(0)") Cổ điển
+								a(href="javascript:void(0)") Hiện đại
+								a(href="javascript:void(0)") Retrol
+								a(href="javascript:void(0)") Scandinavi
+								a(href="javascript:void(0)") Industrial
+								a(href="javascript:void(0)") Metropolitan
+								a(href="javascript:void(0)") Urban
+						.filter
+							.name
+								span Phong cách
+								i.lnr.lnr-chevron-down
+							.attributes
+								a(href="javascript:void(0)") Cổ điển
+								a(href="javascript:void(0)") Hiện đại
+								a(href="javascript:void(0)") Retrol
+								a(href="javascript:void(0)") Scandinavi
+								a(href="javascript:void(0)") Industrial
+								a(href="javascript:void(0)") Metropolitan
+								a(href="javascript:void(0)") Urban
+						.filter.filter-size
+							.name
+								span Kích thước
+								i.lnr.lnr-chevron-down
+							.attributes
+								.attribute
+									.title
+										p Dài
+									input(type="text" placeholder="khoảng...")
+									.unit
+										p Milimet
+								.attribute
+									.title
+										p Rộng
+									input(type="text" placeholder="khoảng...")
+									.unit
+										p Milimet
+								.attribute
+									.title
+										p Khoảng
+									input(type="text" placeholder="khoảng...")
+									.unit
+										p Milimet
+						.filter
+							.name
+								span Chi tiết cấu tạo
+								i.lnr.lnr-chevron-down
+							.attributes
+								a(href="javascript:void(0)") Cổ điển
+								a(href="javascript:void(0)") Hiện đại
+								a(href="javascript:void(0)") Retrol
+								a(href="javascript:void(0)") Scandinavi
+								a(href="javascript:void(0)") Industrial
+								a(href="javascript:void(0)") Metropolitan
+								a(href="javascript:void(0)") Urban
+						.filter
+							.name
+								span Thương hiệu
+								i.lnr.lnr-chevron-down
+							.attributes
+								a(href="javascript:void(0)") Cổ điển
+								a(href="javascript:void(0)") Hiện đại
+								a(href="javascript:void(0)") Retrol
+								a(href="javascript:void(0)") Scandinavi
+								a(href="javascript:void(0)") Industrial
+								a(href="javascript:void(0)") Metropolitan
+								a(href="javascript:void(0)") Urban
+
+			.col-lg-9
+				.tagline-5
+					.title
+						h1 Kệ ti vi
+				.sort
+					select(bg-img="./img/global/selectarrow.png")
+						option(selected) Sắp xếp theo
+						option Giá
+				.row.products
+					- var n = 1
+					while n < 7
+						.col-6.col-md-4
+							.product(style="background-color: pink")
+								figure
+									.product-image
+										img(src=`./img/sp/${n}.png`, alt="")
+									figcaption
+										.product-title
+											h3 kệ gunam 1
+										.product-description
+											p kt: 160 x 60 x 90cm
+										.product-price
+											p 15.500.000đ
+									.product-controls
+										a(href="javascript:void(0)") Thêm vào giỏ hàng
+										a(href="javascript:void(0)") Chi tiết
+						- n = n + 1
+
+				.viewmore
+					a(href="javascript:void(0)") Xem thêm
+	.mobile-product-nav
+		.mobile-product-nav-backdrop
+		.mobile-toggle-button
+			i.lnr.lnr-chevron-right
+
+	.mobile-filter-nav
+		.mobile-filter-nav-backdrop
+		.mobile-toggle-button
+			i.lnr.lnr-funnel

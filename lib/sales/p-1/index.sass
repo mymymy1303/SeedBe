@@ -1,4 +1,4 @@
-section.collection-1
+section.sales-1
 	padding: 2rem 0
 
 	.tagline-5
@@ -28,28 +28,25 @@ section.collection-1
 			outline: none
 			font-size: .875rem
 			color: #666666
-	.collections
-		display: flex
-		flex-wrap: wrap
+	.products
 		margin-top: 1.5rem
-		a
-			&:nth-child(1), &:nth-child(2)
-				flex: 0 0 calc(50% - .9375rem)
-			&:nth-child(1)
-				margin-right: 1.875rem
-			flex: 0 0 100%
+		.product
 			margin-bottom: 1.875rem
-			&:last-child
-				margin-bottom: 0
-			figure
-				.box-zoom
-					position: relative
-					overflow: hidden
-					img
-						max-width: 100%
-						height: auto
-
-.collection-nav
+	.viewmore
+		+flex-center()
+		a
+			display: block
+			width: rem(270px)
+			height: rem(40px)
+			font-weight: 500
+			line-height: rem(40px)
+			border-radius: 1.25rem
+			text-align: center
+			background-color: #fafafa
+			color: $den-1
+			font-size: .875rem
+			box-shadow: 0 0 0 1px #d7d7d7
+.sales-nav
 	margin-bottom: 1.25rem
 	.title
 		h1, h2, h3, h4, h5, h6
@@ -88,13 +85,13 @@ section.collection-1
 				&:hover
 					color: $main
 
-.desktop-collection-nav
+.desktop-sales-nav
 	+media-breakpoint-down(md)
 		display: none
 
-.mobile-collection-nav
+.mobile-sales-nav
 	position: relative
-	.collection-nav
+	.sales-nav
 		width: 20rem
 		background: linear-gradient(315deg, #CFA35C 0%, #909B57 20%, #588B62 40%, #2E776C 60%, #246069 80%, #2F4858 100%)
 		padding: 1rem
@@ -123,7 +120,7 @@ section.collection-1
 					font-weight: 500
 		
 
-	.mobile-collection-nav-backdrop
+	.mobile-sales-nav-backdrop
 		width: calc(100vw - 20rem)
 		height: calc(100vh - 4.5rem)
 		position: fixed
@@ -152,10 +149,10 @@ section.collection-1
 		box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.1)
 
 	&.active
-		.collection-nav
+		.sales-nav
 			left: 0
 			z-index: 900
-		.mobile-collection-nav-backdrop
+		.mobile-sales-nav-backdrop
 			right: 0
 		.mobile-toggle-button
 			left: 17rem
