@@ -3,6 +3,34 @@ section.h-muaonline
 	+media-breakpoint-up(lg)
 		padding: 2rem 0
 
+	.tagline-5
+		display: inline-block
+		width: 50%
+		+media-breakpoint-down(sm)
+			.title
+				&:after
+					display: none
+
+	.sort
+		display: inline-block
+		width: 50%
+		text-align: right
+		select
+			background-size: auto !important
+			background-repeat: no-repeat !important
+			background-position-x: 90% !important
+			-webkit-appearance: none
+			-moz-appearance: none
+			width: fit-content
+			height: rem(28px)
+			line-height: rem(28px)
+			padding-left: 0.5rem
+			padding-right: 2rem
+			border: 0
+			outline: none
+			font-size: .875rem
+			color: #666666
+
 	.content
 		margin-top: 1.75rem
 		h1, h2, h3, h4, h5, h6

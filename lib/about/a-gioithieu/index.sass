@@ -15,6 +15,72 @@ section.about-gioithieu
 			line-height: 1.5rem
 			color: #1c1c1c
 			font-weight: 300
+		.zone1
+			.zone-title
+				margin-bottom: 3rem
+				+media-breakpoint-up(lg)
+					margin-bottom: 3rem
+			.zone-slider-1
+				.item
+					a
+						display: block
+						margin-bottom: 2rem
+						img
+							max-width: 100%
+							height: auto
+							filter: grayscale(1)
+							transition: .3s ease-in-out
+						&:hover, &:active, &:focus
+							img
+								filter: grayscale(0)
+		.zone2
+			.zone-title
+				margin-bottom: 2rem
+				margin-top: 2rem
+				+media-breakpoint-up(lg)
+					margin-bottom: 3rem
+					margin-top: 3rem
+			.zone-slider-2
+				.item
+					a
+						display: block
+						img
+							max-width: 100%
+							height: auto
+							filter: grayscale(1)
+							transition: .3s ease-in-out
+						&:hover, &:active, &:focus
+							img
+								filter: grayscale(0)
+		.tns-ovh
+			position: relative
+			z-index: 1
+			.tns-controls
+				display: flex
+				justify-content: space-between
+				button
+					width: rem(50px)
+					height: rem(50px)
+					outline: none
+					border: 0
+					background-color: transparent
+					opacity: .5
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					z-index: 1
+					left: 0
+					transition: .3s ease-in-out
+					&:last-child
+						left: initial
+						right: 0
+					span
+						font-size: 1.5rem
+						color: #7e7e7e
+			&:hover
+				.tns-controls
+					button
+						opacity: 1
 
 .about-nav
 	.title

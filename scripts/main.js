@@ -58,6 +58,10 @@ theHuyApp.ready(() => {
 	//About
 	theHuyApp.avoidNull(aboutNavMapping);
 	theHuyApp.avoidNull(aboutNavToggle);
+	theHuyApp.avoidNull(partner1SliderInit);
+	theHuyApp.avoidNull(partner1SliderMapping);
+	theHuyApp.avoidNull(partner2SliderInit);
+	theHuyApp.avoidNull(partner2SliderMapping);
 
 	//Dichvuhotro
 	theHuyApp.avoidNull(dichvuhotroNavMapping);
@@ -275,6 +279,74 @@ const aboutNavToggle = () => {
 	})
 }
 
+const partner1SliderInit = () => {
+	try {
+		return tns({
+			container: '.about-gioithieu .zone-slider-1',
+			items: 2,
+			slideBy: 1,
+			nav: false,
+			controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
+			responsive: {
+				576: {
+					items: 2,
+					gutter: 30
+				},
+				768: {
+					items: 3,
+				},
+				992: {
+					items: 5
+				}
+			}
+		})
+	} catch (error) {
+
+	}
+}
+
+const partner1SliderMapping = () => {
+	try {
+		Mapping.mapElements.from('.about-gioithieu .zone1 .tns-controls').to('.about-doitac .zone1 .tns-ovh').use('prependTo');
+	} catch (error) {
+
+	}
+}
+
+const partner2SliderInit = () => {
+	try {
+		return tns({
+			container: '.about-gioithieu .zone-slider-2',
+			items: 2,
+			slideBy: 1,
+			nav: false,
+			controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
+			responsive: {
+				576: {
+					items: 2,
+					gutter: 30
+				},
+				768: {
+					items: 3,
+				},
+				992: {
+					items: 5
+				}
+			}
+		})
+	} catch (error) {
+
+	}
+}
+
+const partner2SliderMapping = () => {
+	try {
+		Mapping.mapElements.from('.about-gioithieu .zone2 .tns-controls').to('.about-doitac .zone2 .tns-ovh').use('prependTo');
+	} catch (error) {
+
+	}
+}
+
 const dichvuhotroNavMapping = () => {
 	try {
 		return new MappingListener({
@@ -379,7 +451,7 @@ const galleryInit = () => {
 const sideBlogFormMapping = () => {
 	try {
 		return new MappingListener({
-			selector: ".blog-1 .blog-form",
+			selector: ".seedbe-blogs .blog-form",
 			desktopWrapper: ".desktop-blog-form",
 			desktopMethod: "appendTo",
 			mobileWrapper: ".mobile-blog-form",
@@ -395,7 +467,7 @@ const sideBlogFormMapping = () => {
 const sideSocialFollowMapping = () => {
 	try {
 		return new MappingListener({
-			selector: ".blog-1 .social-follow",
+			selector: ".seedbe-blogs .social-follow",
 			desktopWrapper: ".desktop-social-follow",
 			desktopMethod: "appendTo",
 			mobileWrapper: ".mobile-social-follow",
@@ -475,8 +547,8 @@ const sideYTuongSocialFollowMapping = () => {
 
 const storeSideBlogFormAndFollowsToMap = () => {
 	try {
-		let blogFormHtml = $('.blog-1 .blog-form').parent().html();
-		let blogFollowHtml = $('.blog-1 .social-follow').parent().html();
+		let blogFormHtml = $('.seedbe-blogs .blog-form').parent().html();
+		let blogFollowHtml = $('.seedbe-blogs .social-follow').parent().html();
 		if (Cookies.get('blog_form_html') == null || Cookies.get('blog_form_html') == "undefined") {
 			Cookies.set('blog_form_html', blogFormHtml, { expires: 1 });
 		}
@@ -806,6 +878,7 @@ $(document).ready(function () {
 	})
 
 	$('.side-nav .megamenu-item-title i').on('click', (e) => {
+		e.preventDefault()
 		let current_nav = $(e.currentTarget).parent().parent()
 		$('.megamenu-item').each((i, e) => {
 			$(e).not($(current_nav)).removeClass('active')
