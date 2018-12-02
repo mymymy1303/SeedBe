@@ -1,7 +1,7 @@
-section.collection-detail-1
+section.sales-detail-1
 	.container
 		.row
-			.offset-lg-3.col-lg-9
+			.col
 				.product-detail
 					.product-detail-slider
 						.swiper-container.slider
@@ -33,33 +33,25 @@ section.collection-detail-1
 							h1 Xuân Collection
 						.subtitle
 							h2 Trọn bộ
+						.code
+							p SKU: 160897
 						.prices
 							.price
 								p 12,100,000
 								p Chưa bao gồm VAT
+							.oldprice
+								p 13,500,000
+						.quantity
+							p SL
+							input(type="text" value="1")
+						.coupon
+							a(href="javascript:void(0)") Code giảm giá
 						.sharer
 							p Chia sẻ qua
 							a(href="javascript:void(0)")
 								i.fab.fa-facebook-f
+						.buy
+							a(href="javascript:void(0)") Mua hàng
 						.brief-content
 							p Kệ TV Khoai Tây  kiểu dáng Bắc  Âu đương  đại  ngoài  chức  năng  chính còn đem đến  nhiều không  gian  lưu trữ hơn cho  phòng khách.  Việc  sắp xếp và bảo  quản  sách  báo,  tạp  chí, thiết bị điện tử sẽ  hiệu  quả  hơn  nhờ thiết kế gồm 6 ngăn chứa  và mặt  kệ rộng rãi. 
 
-				.row.products
-					- var n = 1
-					while n < 7
-						.col-6.col-md-4
-							.product
-								figure
-									.product-image
-										img(src=`./img/sp/${n}.png`, alt="")
-									figcaption
-										.product-title
-											h3 kệ gunam 1
-										.product-description
-											p kt: 160 x 60 x 90cm
-										.product-price
-											p 15.500.000đ
-									.product-controls
-										a(href="javascript:void(0)") Thêm vào giỏ hàng
-										a(href="javascript:void(0)") Chi tiết
-						- n = n + 1

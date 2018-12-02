@@ -1,0 +1,16 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'Demo - Sản phẩm chi tiết'
+	- bodyClass = 'about-page'
+
+block header
+	include ../lib/header/h-1/index.pug
+block main
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/product_detail/p-1/index.pug
+	include ../lib/product_detail/p-2/index.pug
+	include ../lib/product_detail/p-3/index.pug
+	include ../lib/product_detail/p-4/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug

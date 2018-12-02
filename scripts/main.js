@@ -119,10 +119,10 @@ theHuyApp.ready(() => {
 
 		const productDetailSliderInit = new Swiper('.product-detail-slider .slider', {
 			spaceBetween: 0,
-			// navigation: {
-			// 	nextEl: '.swiper-button-next',
-			// 	prevEl: '.swiper-button-prev',
-			// },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
 			thumbs: {
 				swiper: productDetailThumbnailInit
 			}
@@ -130,6 +130,23 @@ theHuyApp.ready(() => {
 	} catch (error) {
 
 	}
+
+	//SP CT
+	try {
+		$('.product-tabs .tab .title').on('click', function(e) {
+			$(e.currentTarget).next().slideToggle(300);
+			$(e.currentTarget).toggleClass('active');
+		})
+	} catch (error) {
+		
+	}
+
+	theHuyApp.avoidNull(likeProductSliderInit);
+	theHuyApp.avoidNull(likeProductSliderMapping);
+
+	//SALES CT
+	theHuyApp.avoidNull(likeSalesProductSliderInit);
+	theHuyApp.avoidNull(likeSalesProductSliderMapping);
 
 
 	//Filter
@@ -607,6 +624,74 @@ const filterNavToggle = () => {
 	})
 }
 
+
+const likeProductSliderInit = () => {
+	try {
+		return tns({
+			container: '.product-detail-4 .like-product-slider',
+			items: 1,
+			slideBy: 1,
+			nav: false,
+			controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
+			responsive: {
+				576: {
+					items: 2,
+					gutter: 30
+				},
+				768: {
+					items: 3,
+				},
+				992: {
+					items: 4
+				}
+			}
+		})
+	} catch (error) {
+
+	}
+}
+
+const likeProductSliderMapping = () => {
+	try {
+		Mapping.mapElements.from('.product-detail-4 .tns-controls').to('.product-detail-4 .tns-ovh').use('prependTo');
+	} catch (error) {
+
+	}
+}
+
+const likeSalesProductSliderInit = () => {
+	try {
+		return tns({
+			container: '.sales-detail-5 .like-product-slider',
+			items: 1,
+			slideBy: 1,
+			nav: false,
+			controlsText: ["<span class='lnr lnr-chevron-left'></span>", "<span class='lnr lnr-chevron-right'></span>"],
+			responsive: {
+				576: {
+					items: 2,
+					gutter: 30
+				},
+				768: {
+					items: 3,
+				},
+				992: {
+					items: 4
+				}
+			}
+		})
+	} catch (error) {
+
+	}
+}
+
+const likeSalesProductSliderMapping = () => {
+	try {
+		Mapping.mapElements.from('.sales-detail-5 .tns-controls').to('.sales-detail-5 .tns-ovh').use('prependTo');
+	} catch (error) {
+
+	}
+}
 
 $(document).ready(function () {
 
