@@ -281,6 +281,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 	<!-- ////////////// Javascript Include ////////////// -->
 	<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
 	<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>
+	<script src="/Data/Sites/1/skins/default/js/ecommerce.js"></script>
 	<script type="text/javascript">
 		function HideToolbar() { $(".cmsadminpanel").addClass("toggled"), $(".fa-chevron-circle-right").addClass("fa-rotate-180") } function ShowToolbar() { $(".cmsadminpanel").removeClass("toggled"), $(".fa-chevron-circle-right").removeClass("fa-rotate-180") } $(document).ready(function () { $("#pullmenucms").click(function (o) { o.preventDefault(), $(this).parents(".cmsadminpanel").hasClass("toggled") ? (ShowToolbar(), Set_Cookie("toolbarOpenState", "open")) : (HideToolbar(), Set_Cookie("toolbarOpenState", "closed")) }); var o = Get_Cookie("toolbarOpenState"); null != o && ("closed" == o && HideToolbar(), "open" == o && ShowToolbar()) });
 	</script>

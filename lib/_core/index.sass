@@ -286,7 +286,6 @@ html
 					font-size: .875rem
 					color: #666666
 					font-weight: 400
-					text-transform: uppercase
 					margin-bottom: .1rem
 			.product-price
 				p
@@ -426,9 +425,10 @@ html
 //Pagination
 .modulepager
 	padding-bottom: 2rem
+	padding-top: 3rem
 	+media-breakpoint-up(lg)
 		padding-bottom: 3rem
-		padding-top: 1rem
+		padding-top: 2rem
 	ul.pagination
 		margin: 0
 		padding: 0
@@ -454,6 +454,7 @@ html
 				color: #999999
 				text-decoration: none
 				&.NextPage
+					font-size: 0
 					position: relative
 					&:before
 						position: absolute
@@ -466,6 +467,7 @@ html
 						top: 0
 						font-size: .75rem
 				&.BackPage
+					font-size: 0
 					position: relative
 					&:before
 						position: absolute
@@ -532,6 +534,8 @@ html
 			margin-top: .5rem
 			box-shadow: 0 1px 0 0 #dfdfdf
 			padding-bottom: .75rem
+			&.active
+				display: block
 			a
 				display: block
 				color: #3f3f3f
@@ -567,29 +571,32 @@ html
 						top: 0
 						font-size: .55rem
 
-		&.filter-color
-			.attributes
+		
+			&.filter-color
 				width: 100%
+				font-size: 0
 				a
 					all: initial
 					display: inline-block
-					width: calc((100% - 5rem) / 5)
+					width: calc((100% - 5rem - 10px) / 5)
 					height: 1.5rem
 					margin-right: 1.25rem
 					background-color: yellow
 					cursor: pointer
-					box-shadow: inset 0 0 0 1px #000000
+					border: 1px solid rgba(0,0,0,.5)
 					margin-top: .875rem
 					&:nth-child(5n)
 						margin-right: 0
 					&:after
 						all: initial
+					&:before
+						all: initial
 					&.active
+						box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5)
 						&:before
 							all: initial
 		
-		&.filter-size
-			.attributes
+			&.filter-size
 				width: 100%
 				margin-top: 0
 				.title
@@ -661,23 +668,23 @@ html
 							left: 0
 							top: 0
 							font-size: .55rem
-			&.filter-color
-				.attributes
-					a
-						padding-left: 0
-						&:after
-							all: initial
-						&.active
-							all: initial
-							&:before
+				&.filter-color
+					.attributes
+						a
+							padding-left: 0
+							&:after
 								all: initial
-			&.filter-size
-				.title
-					p
-						color: $trang
-				.unit
-					p
-						color: $trang
+							&.active
+								all: initial
+								&:before
+									all: initial
+				&.filter-size
+					.title
+						p
+							color: $trang
+					.unit
+						p
+							color: $trang
 
 		
 
@@ -688,7 +695,7 @@ html
 		z-index: 599
 		top: 4.5rem
 		right: -100vw
-		background-color: rgba(0, 0, 0, .75)
+		background-color: transparent
 		transition: .5s ease-in-out
 
 	.mobile-toggle-button
@@ -987,3 +994,16 @@ html
 									width: 10%
 									text-align: right
 
+.seedbe-blogs
+	.modulepager
+		display: none
+
+.product-detail-page
+	.banner-2
+		display: none
+	.modulepager
+		display: none
+
+.seedbe-product
+	.modulepager
+		display: none

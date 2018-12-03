@@ -83,6 +83,41 @@ theHuyApp.ready(() => {
 	theHuyApp.avoidNull(sideSocialFollowMapping);
 	theHuyApp.avoidNull(storeSideBlogFormAndFollowsToMap);
 	theHuyApp.avoidNull(injectSideBlogFormAndFollowsToBlogDetails);
+	$("body").on("click", "a.ajaxpagerlink", function (e) {
+		e.preventDefault();
+
+		let obj = $(this);
+		let pageurl = $(this).attr('href');
+		if (!pageurl.length) return;
+
+		$.ajax({
+			url: pageurl,
+			data: { isajax: true },
+			success: function success(data) {
+				$('.ajaxresponse .ajaxresponsewrap').append($(data).find('.ajaxresponsewrap').html());
+				obj.remove();
+			}
+		});
+		return false;
+	});
+	$("body").on("click", "a.ajaxpagerlinkproduct", function (e) {
+		e.preventDefault();
+
+		let obj = $(this);
+		let pageurl = $(this).attr('href');
+		if (!pageurl.length) return;
+
+		$.ajax({
+			url: pageurl,
+			data: { isajax: true },
+			success: function success(data) {
+				$('.ajaxresponse').append($(data).find('.ajaxresponse').html());
+				$('.viewmore').append($(data).find('.viewmore').html());
+				obj.remove();
+			}
+		});
+		return false;
+	});
 
 	//Ytuongloikhuyen
 	theHuyApp.avoidNull(ideaNavCollapsibleInit);
@@ -137,12 +172,12 @@ theHuyApp.ready(() => {
 
 	//SP CT
 	try {
-		$('.product-tabs .tab .title').on('click', function(e) {
+		$('.product-tabs .tab .title').on('click', function (e) {
 			$(e.currentTarget).next().slideToggle(300);
 			$(e.currentTarget).toggleClass('active');
 		})
 	} catch (error) {
-		
+
 	}
 
 	theHuyApp.avoidNull(likeProductSliderInit);
@@ -162,12 +197,17 @@ theHuyApp.ready(() => {
 	firstFilter.children('.name').addClass('active');
 	firstFilter.children('.attributes').slideDown(300);
 	//Filter toggle
-	$('.filter .name').on('click', function (e) {
+	$('body').on('click', '.filter .name', function (e) {
 		let filterParent = $(e.currentTarget).parents('.filter');
 		let currentAttributes = $(filterParent).children('.attributes');
 		$(e.currentTarget).toggleClass('active');
 		$(currentAttributes).slideToggle(300);
+		$(currentAttributes).toggleClass('active');
 	})
+
+	//Pagination Last Page and 1st Page hidden
+	$($('.FirstPage').parent()).css('display', 'none')
+	$($('.LastPage').parent()).css('display', 'none')
 
 })
 
