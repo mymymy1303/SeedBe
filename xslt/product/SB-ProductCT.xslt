@@ -232,6 +232,7 @@
 								Chi tiết
 							</xsl:text>
 						</a>
+						<xsl:value-of select="/ProductDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</div>
 				</figure>
 			</div>
@@ -297,6 +298,7 @@
 								Chi tiết
 							</xsl:text>
 						</a>
+						<xsl:value-of select="/ProductDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</div>
 				</figure>
 			</div>

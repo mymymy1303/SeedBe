@@ -1,0 +1,160 @@
+.thankyou
+	text-align: center
+	+media-breakpoint-down(md)
+		margin-bottom: 20px
+		padding: 20px 0
+
+.payment-success
+	.notice
+		color: #fff
+		background: #7fb9dc
+		padding: 8px 10px
+		border-radius: 5px
+		display: flex
+		align-items: center
+		margin-bottom: 15px
+		.mdi
+			border-radius: 50%
+			background: #298ac4
+			width: 25px
+			height: 25px
+			display: flex
+			justify-content: center
+			align-items: center
+			
+		span
+			// width: calc(100% - 40px)
+			margin-left: 10px
+			font-weight: 600
+			text-transform: uppercase
+			font-size: r(14.82px)
+			color: #fff
+	.letter
+		font-size: 0.875rem
+		margin-bottom: 15px
+		font-size: r(14.82px)
+		line-height: 1.6
+		ul
+			list-style: none
+		a
+			color: #ff0000
+			font-weight: 500
+			&:hover
+				text-decoration: underline
+	.cart-info
+		border: 2px solid #f7f7f7
+		border-radius: 5px
+		margin-bottom: 15px
+		.info-overview
+			display: flex
+			@media (max-width: 576px)
+				flex-direction: column
+			.info-col
+				width: 33.33%
+				padding: 10px
+				font-size: r(14.82px)
+				font-weight: 400
+				@media (max-width: 576px)
+					width: 100%
+				strong 
+					font-size: r(14.82px)
+					font-weight: 400
+				&:nth-child(2)
+					text-align: center
+					@media (max-width: 576px)
+						text-align: left
+				&:nth-child(3)
+					text-align: right
+					@media (max-width: 576px)
+						text-align: left
+					strong
+						color: #298ac4
+						font-weight: 700
+		.cart-finish-table
+			width: 100%
+			border-top: 1px solid #e6e6e6
+			th
+				border-bottom: 1px solid #e6e6e6
+				font-size: r(14.82px)
+				font-weight: 700
+				color: #666666
+			td
+				border-bottom: 1px solid #e6e6e6
+			th, td
+				padding: 5px 10px
+				font-size: 0.875rem
+				strong
+					display: none
+				&:first-child, &:nth-child(3)
+					width: 20%
+				&:nth-child(2)
+					text-overflow: ellipsis
+					overflow: hidden
+				&:nth-child(4)
+					width: 15%
+					text-align: right
+			+media-breakpoint-down(xs)
+				tr
+					border-bottom: 1px solid #ebebeb
+					display: flex
+					flex-direction: column
+					width: 100%
+					border-top: 1px solid #ebebeb
+					&:first-child
+						display: none
+					td
+						border: 0
+						font-size: 0.9375rem
+						display: flex
+						strong
+							display: block
+							margin-right: 0.3rem
+						&:first-child, &:nth-child(3),&:nth-child(4)
+							width: 100%
+							text-align: left
+		.total-overview
+			display: flex
+			.overview-col
+				width: 33.33%
+				flex: 33.33%
+				padding: 10px
+				font-size: r(14.82px)
+				strong
+					color: #ff0000
+					font-weight: 500
+				&:nth-child(2)
+					text-align: center
+				&:nth-child(3)
+					text-align: right
+			+media-breakpoint-down(xs)
+				flex-direction: column
+				.overview-col
+					width: 100%
+					flex: 100%
+					text-align: left
+					&:nth-child(2)
+						text-align: left
+					&:nth-child(3)
+						text-align: left
+	.receive-address
+		border-radius: 5px
+		border: 1px solid #e6e6e6
+		padding: 10px
+		font-size: 0.875rem
+		ul 
+			list-style: none
+			font-weight: 500
+			margin-bottom: 5px
+			color: #666666
+			font-size: r(14.82px)
+		.title
+			font-weight: 600
+			margin-bottom: 5px
+			color: #666666
+			font-size: r(14.82px)
+.navi
+	.btn
+		font-size: r(14.82px)
+	.btn-primary
+		background: #69add6 
+		border: 0

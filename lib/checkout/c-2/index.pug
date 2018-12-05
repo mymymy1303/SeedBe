@@ -1,0 +1,70 @@
+section.canhcam-checkout-2
+	.container
+		.row 
+			.col-lg-8
+				.cart-login
+					.login-form 
+						.select-group
+							ul
+								li
+									input#ctl00_mainContent_ctl01_rdbCheckoutAsGuest(type='radio', name='ctl00$mainContent$ctl01$login', value='rdbCheckoutAsGuest', onclick="javascript:setTimeout('__doPostBack(\'ctl00$mainContent$ctl01$rdbCheckoutAsGuest\',\'\')', 0)")
+									label(for='ctl00_mainContent_ctl01_rdbCheckoutAsGuest') Đặt hàng không cần đăng ký
+								li
+									span.active
+										input#ctl00_mainContent_ctl01_rdbCheckoutAsReturningCustomer(type='radio', name='ctl00$mainContent$ctl01$login', value='rdbCheckoutAsReturningCustomer', checked='checked')
+										label(for='ctl00_mainContent_ctl01_rdbCheckoutAsReturningCustomer') Tôi đã có tài khoản
+							.module-title Vui lòng nhập email
+							#ctl00_mainContent_ctl01_LoginCtrl_pnlLContainer
+								.form-group
+									input#ctl00_mainContent_ctl01_LoginCtrl_UserName.form-control(type='text', placeholder='Email')
+								.form-group
+									input#ctl00_mainContent_ctl01_LoginCtrl_Password.form-control(name='ctl00$mainContent$ctl01$LoginCtrl$Password', type='password', placeholder='Mật khẩu')
+								.form-group
+									a#ctl00_mainContent_ctl01_LoginCtrl_lnkPasswordRecovery(href='http://preview1673.canhcam.com.vn/Secure/RecoverPassword.aspx') Quên mật khẩu?
+									a#ctl00_mainContent_ctl01_LoginCtrl_lnkRegisterExtraLink(href='http://preview1673.canhcam.com.vn/Secure/Register.aspx') Đăng ký
+								input#ctl00_mainContent_ctl01_LoginCtrl_Login.hvr-sweep-to-right.btn-continue(type='submit', name='ctl00$mainContent$ctl01$LoginCtrl$Login', value='Tiếp tục', onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$mainContent$ctl01$LoginCtrl$Login", "", true, "CheckoutLogin", "", false, false))')
+			.col-lg-4.box-resume.mt-4.mt-lg-0
+				.box-resume-title
+					.row.align-items-center
+						.col
+							h3
+								i.fa.fa-shopping-cart
+								| 
+								span Đơn hàng (
+									span 1
+									| 
+									span SẢN PHẨM)
+						.col-auto 
+							a.btn.btn-sm.btn-warning.text-dark(href="#")
+								i.fa.fa-edit 
+								| 
+								| Sửa
+				table.table.table-bordered
+					tbody
+						tr 
+							td.product-details
+								.media
+									img.mr-3(src="./img/product/product_1.jpg" alt="XXXXXX")
+									.media-body
+										.more American Tourister
+										h4.mb-0 
+											a(href="#") Vali kéo Bon Air Deluxe
+										.desc Trung 66cm/24inch TSA
+							td.product-result
+								.quantity 3.900.000 ₫
+									br 
+									| x 1
+								.sum 3.900.000 ₫
+						tr 
+							td.product-details Tạm tính
+							td.product-result
+								.sum 3.900.000 ₫
+						tr 
+							td.product-details Tạm tính
+							td.product-result
+								.sum 3.900.000 ₫
+						tr 
+							td.product-details Thành tiền
+							td.product-result
+								.sum 3.900.000 ₫
+

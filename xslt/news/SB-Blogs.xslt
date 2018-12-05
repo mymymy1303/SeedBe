@@ -6,24 +6,25 @@
 	<!--Begin News-->
 	<xsl:template match="/">
 		<section class="blog-1">
-			<div class="container ajaxresponse">
-				<div class="row ajaxresponsewrap">
+			<div class="container ajaxresponsewrap">
+				<div class="row ajaxresponse">
 					<xsl:if test="count(/NewsList/News) > 0">
 						<!--Call News Child-->
 						<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 					</xsl:if>
 				</div>
 				<div class="row">
-
 					<div class="col-lg-8 col-xl-9">
 						<xsl:if test="/NewsList/NextPageUrl!=''">
-							<a class="viewmore-btn ajaxpagerlink">
-								<xsl:attribute name="href">
-									<xsl:value-of select="/NewsList/NextPageUrl" />
-								</xsl:attribute>
-								<xsl:text>Xem thêm</xsl:text>
-								<span class="lnr lnr-arrow-right"></span>
-							</a>
+							<div class="viewmorelink">
+								<a class="viewmore-btn ajaxpagerlinknews">
+									<xsl:attribute name="href">
+										<xsl:value-of select="/NewsList/NextPageUrl" />
+									</xsl:attribute>
+									<xsl:text>Xem thêm</xsl:text>
+									<span class="lnr lnr-arrow-right"></span>
+								</a>
+							</div>
 						</xsl:if>
 					</div>
 				</div>

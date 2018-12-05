@@ -21,22 +21,26 @@
 			flex: 0 0 25%
 			max-width: 25%
 	a
+		color: #333333
 		height: 100%
 		display: flex
 		justify-content: space-between
 		align-items: center
 		text-decoration: none
 		position: relative
+		transition: .3s ease-in-out
 		&:active, &:focus
-			h1, h2, h3, h4, h5, h6, i, em
+			color: color-get($mau, main)
+			i, em
 				color: color-get($mau, main)
 		+media-breakpoint-up(lg)
 			padding-right: 1rem
 			padding-left: 1rem
-			h1, h2, h3, h4, h5, h6, i, em
+			i, em
 				transition: .3s ease-in-out
 			&:hover
-				h1, h2, h3, h4, h5, h6, i, em
+				color: color-get($mau, main)
+				i, em
 					color: color-get($mau, main)
 		+media-breakpoint-up(xl)
 			padding-right: 2rem
@@ -63,13 +67,14 @@
 			top: 0
 			right: -1px
 			background-color: #999999
-		h1, h2, h3, h4, h5, h6
-			font-size: 1rem
-			font-weight: 500
-			line-height: 1.5rem
-			color: #333333
-			text-transform: uppercase
-			+media-breakpoint-up(lg)
-		i, em
-			font-size: .875rem
-			color: #333333
+	h1, h2, h3, h4, h5, h6
+		font-size: 1rem
+		font-weight: 500
+		line-height: 1.5rem
+		color: #333333
+		text-transform: uppercase
+		height: 100%
+		+media-breakpoint-up(lg)
+	i, em
+		font-size: .875rem
+		color: #333333

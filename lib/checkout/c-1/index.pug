@@ -1,0 +1,131 @@
+section.canhcam-checkout-1
+	.container
+		.row
+			.col
+				h3
+					i.fa.fa-shopping-cart
+					span Giỏ hàng của bạn 
+					span (2 
+					span sản phẩm)
+
+		.row
+			.col
+				table.table.table-bordered
+					thead
+						tr 
+							th.product-details Sản phẩm
+							th.product-price Giá
+							th.product-count Số lượng
+							th.product-result Tổng
+					tbody
+						- for(x=1;x<5;x++)
+							tr 
+								td.product-details
+									.row 
+										.col
+											.media
+												img(src="./img/product/product_1.jpg" alt="XXXXXX")
+												.media-body
+													.name Almond Oil 2in1
+													.desc 110ml
+								td.product-price
+									.price 1.950.000 ₫
+									.promotion Giảm giá 50%
+								td.product-count 
+									.form-inline#quantity
+										.form-group
+											input(value="1")
+								td.product-result
+									.sum 3.900.000 ₫
+
+		.row
+			.col
+				.total.text-center.text-sm-right
+					.price Tạm tính:
+						| 
+						span 3.900.000 ₫
+					.price-vat Giá chưa bao gồm VAT
+
+		.row.mb-4.navi
+			.col.mb-3.text-center.text-sm-left
+				a.btn.btn-prev(href="#")
+					i.fa.fa-chevron-left.mr-2
+					| 
+					| Tiếp tục mua hàng
+			.col.mb-3.text-center.text-sm-right
+				a.btn.btn-next(href="#") Tiến hành thanh toán
+					| 
+					i.fa.fa-chevron-right.ml-2
+
+		.row
+			.col-12
+				h3
+					i.far.fa-clock
+					span Sản phẩm đã xem
+			.col-12.product-viewed-wrapper
+				.product-viewed.owl-carousel.owl-theme
+					.item
+						.media
+							img(src="./img/product/product_1.jpg" alt="XXXXXX")
+							.media-body
+								.brand Head &amp; Shoulder
+								.name Almond Oil 2in1
+								.desc 110ml
+						a(href="#").btn.btn-outline-primary Thêm vào giỏ hàng
+					.item
+						.media
+							img(src="./img/product/product_1.jpg" alt="XXXXXX")
+							.media-body
+								.brand Head &amp; Shoulder
+								.name Almond Oil 2in1
+								.desc 110ml
+						a(href="#").btn.btn-outline-primary Thêm vào giỏ hàng
+					.item
+						.media
+							img(src="./img/product/product_1.jpg" alt="XXXXXX")
+							.media-body
+								.brand Head &amp; Shoulder
+								.name Almond Oil 2in1
+								.desc 110ml
+						a(href="#").btn.btn-outline-primary Thêm vào giỏ hàng
+					.item
+						.media
+							img(src="./img/product/product_1.jpg" alt="XXXXXX")
+							.media-body
+								.brand Head &amp; Shoulder
+								.name Almond Oil 2in1
+								.desc 110ml
+						a(href="#").btn.btn-outline-primary Thêm vào giỏ hàng
+					.item
+						.media
+							img(src="./img/product/product_1.jpg" alt="XXXXXX")
+							.media-body
+								.brand Head &amp; Shoulder
+								.name Almond Oil 2in1
+								.desc 110ml
+						a(href="#").btn.btn-outline-primary Thêm vào giỏ hàng
+					.item
+						.media
+							img(src="./img/product/product_1.jpg" alt="XXXXXX")
+							.media-body
+								.brand Head &amp; Shoulder
+								.name Almond Oil 2in1
+								.desc 110ml
+						a(href="#").btn.btn-outline-primary Thêm vào giỏ hàng
+					.item
+						.media
+							img(src="./img/product/product_1.jpg" alt="XXXXXX")
+							.media-body
+								.brand Head &amp; Shoulder
+								.name Almond Oil 2in1
+								.desc 110ml
+						a(href="#").btn.btn-outline-primary Thêm vào giỏ hàng
+					.item
+						.media
+							img(src="./img/product/product_1.jpg" alt="XXXXXX")
+							.media-body
+								.brand Head &amp; Shoulder
+								.name Almond Oil 2in1
+								.desc 110ml
+						a(href="#").btn.btn-outline-primary Thêm vào giỏ hàng
+						

@@ -1004,6 +1004,26 @@ html
 	.modulepager
 		display: none
 
-.seedbe-product
+.seedbe-product, .seedbe-sales
 	.modulepager
 		display: none
+
+.edit-link
+	i.fa.fa-pencil
+		position: relative
+		&:before
+			font-family: 'Font Awesome 5 Free'
+			content: '\f044'
+			color: #333333
+			font-size: 1rem
+.product, .collections
+	.edit-link
+		i.fa.fa-pencil
+			&:before
+				color: #ffffff
+.collection-2, .home-4
+	.edit-link
+		margin-top: 1rem
+		i.fa.fa-pencil
+			&:before
+				color: #ffffff

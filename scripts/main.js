@@ -83,7 +83,8 @@ theHuyApp.ready(() => {
 	theHuyApp.avoidNull(sideSocialFollowMapping);
 	theHuyApp.avoidNull(storeSideBlogFormAndFollowsToMap);
 	theHuyApp.avoidNull(injectSideBlogFormAndFollowsToBlogDetails);
-	$("body").on("click", "a.ajaxpagerlink", function (e) {
+	
+	$("body").on("click", "a.ajaxpagerlinknews", function (e) {
 		e.preventDefault();
 
 		let obj = $(this);
@@ -94,7 +95,9 @@ theHuyApp.ready(() => {
 			url: pageurl,
 			data: { isajax: true },
 			success: function success(data) {
-				$('.ajaxresponse .ajaxresponsewrap').append($(data).find('.ajaxresponsewrap').html());
+				console.log($(data).find('.ajaxresponse').html())
+				$('.ajaxresponse').append($(data).find('.ajaxresponse').html());
+				$('.viewmorelink').append($(data).find('.viewmorelink').html());
 				obj.remove();
 			}
 		});

@@ -177,6 +177,7 @@
 								Chi tiết
 							</xsl:text>
 						</a>
+						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</div>
 				</figure>
 			</div>

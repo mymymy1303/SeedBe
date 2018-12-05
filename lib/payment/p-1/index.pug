@@ -1,0 +1,89 @@
+.container
+	.row
+		.col-lg-5.col-xl-4
+			.thankyou.text-xs-center.clearfix
+				img(alt='', src='/Data/Sites/1/media/cart/thank-you.jpg')
+		.col-12.col-lg-7.col-xl-8
+			.payment-success.clearfix
+				h1.notice
+					span.mdi.mdi-check
+					// <span>{PaymentStatus}</span></h1>
+					span ĐƠN HÀNG CỦA BẠN ĐÃ ĐƯỢC HOÀN TẤT
+				.letter
+					p
+						| Xin cảm ơn quý khách đã mua hang tại website 
+						a(href='http://preview1673.canhcam.com.vn/') shopmuaxuan.com
+						| .
+						| Thông tin chi tiết đơn hàng đã được gửi đến hộp mail của quý khách. Mọi thắc mắc xin vui lòng liên hệ:
+					ul
+						li
+							| Hotline: 
+							a(href='tel:+84903319840') VN: (+84) 90 331 9840
+						li
+							| Email: 
+							a(href='mailto:uyenuong@gmail.com') uyenuong@gmail.com
+				.cart-info
+					.info-overview
+						.info-col
+							| Đơn hàng: 
+							strong #354599438
+						.info-col
+							| Ngày đặt: 
+							strong 05/08/2017
+						.info-col
+							| Tình trạng: 
+							strong Đang xử lý
+					table.cart-finish-table
+						tbody
+							tr
+								th Mã sản phẩm
+								th Tên sản phẩm
+								th Đơn giá
+								th Số lượng
+							tr
+								td 
+									strong Mã sản phẩm: 
+									|  #315406
+								td 	
+									strong Tên sản phẩm: 
+									|  UPLITE SPL 71cm Spinner
+								td 
+									strong Đơn giá: 
+									|  10.000.000 đ
+								td 
+									strong Số lượng: 
+									|  x 1
+							tr
+								td 
+									strong Mã sản phẩm: 
+									|  #315406
+								td 	
+									strong Tên sản phẩm: 
+									|  UPLITE SPL 71cm Spinner
+								td 
+									strong Đơn giá: 
+									|  10.000.000 đ
+								td 
+									strong Số lượng: 
+									|  x 1
+
+					.total-overview
+						.overview-col
+							| Tổng số tiền: 
+							strong 22.000.000đ
+						.overview-col
+							| Đã thanh toán: 
+							strong 10.000.000đ
+						.overview-col
+							| Còn lại: 
+							strong 12.000.000đ
+			.row.mb-4.navi.mt-5
+				.col.mb-3.text-center.text-sm-left
+					a.btn.btn-secondary.text-white(href='/')
+						em.fa.fa-chevron-left.mr-2
+						| Quay lại
+				.col.mb-3.text-center.text-sm-right
+					a.btn.btn-primary.text-white(href='/Product/PurchaseHistory.aspx')
+						| Quản lý đơn hàng
+						em.fa.fa-chevron-right.ml-2
+	br

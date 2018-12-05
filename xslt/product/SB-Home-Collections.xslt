@@ -4,24 +4,11 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<section class="collection-2">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="tagline-1">
-							<div class="title">
-								<h2>bộ sưu tập khác</h2>
-							</div>
-							<div class="link"><a href="javascript:void(0)"><span>Xem tất cả</span><i class="lnr lnr-arrow-right"></i></a></div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
-				</div>
-			</div>
-		</section>
+		<div class="row">
+			<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
+		</div>
 	</xsl:template>
+
 
 	<xsl:template match="Product">
 		<div class="col-12 col-md-4">
@@ -53,7 +40,9 @@
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
-							<xsl:text>Chi tiết</xsl:text>
+							<xsl:text>
+								Chi tiết
+							</xsl:text>
 						</a>
 						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</div>
