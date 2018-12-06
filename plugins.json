@@ -23,6 +23,7 @@
 		"plugins/mapping-listener.js",
 		"bower_components/lightgallery/dist/js/lightgallery-all.min.js",
 		"node_modules/js-cookie/src/js.cookie.js",
-		"bower_components/swiper/dist/js/swiper.min.js"
+		"bower_components/swiper/dist/js/swiper.min.js",
+		"plugins/jquery.touchspin.min.js"
 	]
 }

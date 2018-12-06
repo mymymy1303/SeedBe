@@ -5,13 +5,15 @@
 	h3 
 		+pad(.75rem 0)
 		margin-bottom: 0
-		font-size: r(14.82px)
+		font-size: 15px
 		text-transform: uppercase
 		span
 			font-weight: 600
 		i
 			margin-right: 0.5rem
-			color: #298ac4 
+			color: #ff0102
+			font-size: 1rem
+			line-height: 1.5rem
 	table
 		thead
 			background: #f2f2f2
@@ -25,8 +27,9 @@
 					border-bottom: 0
 					border-left: 0
 					border-right: 0
-					font-weight: 500
-					font-size: r(14.82px)
+					font-weight: 700
+					font-size: 15px
+					text-align: left
 		tbody 
 			td 
 				border-left: 0
@@ -39,14 +42,18 @@
 					img
 						max-width: 80px
 					.media-body
-						+fz(.9rem)
-						h4
-							+fz(.9rem)
-							+fw(bold)
-							a 
-								color: darken(color-get($mau,trang),80%)
+						margin-left: 1rem
+						.name
+							color: #333333
+							font-size: .9375rem
+							font-weight: 700
+							text-transform: uppercase
+							line-height: 1.5rem
 			.product-price
 				.price
+					color: #000000
+					font-weight: 700
+					font-size: .9375rem
 				.promotion
 					color: red
 					line-height: 1rem
@@ -70,53 +77,68 @@
 						line-height: 0
 						background: #f4f4f4
 					.bootstrap-touchspin-up
-						border-radius: r(14.5px)
+						border-radius: 15px
 						border-top-left-radius: 0
 						border-bottom-left-radius: 0
 					.bootstrap-touchspin-down
-						border-radius: r(14.5px)
+						border-radius: 15px
 						border-top-right-radius: 0
 						border-bottom-right-radius: 0
 			.product-result
 				text-align: right
 				white-space: nowrap
 				.sum
-					color: #f30a0a
-					font-size: r(14.82px)
-					+lh(1.5rem)
-					+fw(500)
+					color: #ff0102
+					font-size: .9375rem
+					font-weight: 700
 	.total 
 		padding-bottom: 2rem
-		font-size: r(14.82px)
-		font-weight: 500
+		font-size: 15px
+		font-weight: 400
 		.price
 			span 
-				color: #ff0000
-				font-size: r(19.76px)
+				color: #a8002a
+				font-size: 1.5rem
+				font-weight: 700
 		.price-vat
-			font-size: r(11.85px)
+			font-size: 13px
 	.navi
-		.btn-prev,.btn-next
-			padding: 0.375rem 1.5rem
-			font-size: r(13.83px)
+		.btn-prev, .btn-next
+			width: 15rem
+			height: 2.5rem
+			line-height: 2.5rem
+			padding: 0
+			text-align: center
+			border-radius: 1.25rem
+			font-size: .9375rem
+			color: #333333
+			font-weight: 400
+			border: 0
+			outline: none
 		.btn-prev
-			background: #ededed
+			background: #f8f8f8
 			color: #333
 		.btn-next
-			background: #298ac4
+			background: #a8002a
 			color: #fff
-			font-weight: 500
+	.far.far-clock
+		color: #ff0102
+		font-size: 1.125rem
+		line-height: 1.5rem
 	.product-viewed-wrapper
 		padding: 0.875rem 0.5rem
-		border: 1px solid #acacac
-		cursor: grabbing
+		border: 1px solid #dadddd
 		.product-viewed
+			display: flex
+			flex-wrap: wrap
 			.owl-item
 				display: flex
 				justify-content: center
 			.item
+				flex: 3 1 auto
 				display: flex
 				flex-direction: column
+				align-items: center
 				@media (min-width: 992px)
 					width: 136px
 				.media
@@ -129,19 +151,27 @@
 					.media-body
 						text-align: center
 						color: #333
-						font-size: r(11.85px)
-						.brand
+						font-size: 12px
+						.brand, .desc
+							display: none
 						.name
+							color: #333333
+							font-size: 13px
+							font-weight: 700
 							text-transform: uppercase
-							+text-clamp(4)
+							margin-top: .5rem
 				.btn
-					font-size: r(12px)
+					font-size: 12px
 					margin-top: 0.5rem
-					border-color: #acacac
+					border-color: #d9d9d9
 					color: #333
 					display: flex
 					align-items: center
 					justify-content: center
+					margin-bottom: 2rem
+					width: 136px
+					height: 30px
+					border-radius: 15px
 					&:hover
 						background: transparent
 
@@ -166,8 +196,8 @@
 						text-align: right
 					.product-result
 						.sum 
-							+fz(1rem)
-							+lh(1rem)
+							font-size: 1rem
+							line-height: 1rem
 					.product-count
 						padding-top: 0
 						padding-bottom: 0

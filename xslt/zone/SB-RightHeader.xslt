@@ -15,6 +15,11 @@
 	<xsl:template match="Zone" mode="Zone1">
 		<li class="main-nav-item">
 			<a href="javascript:void(0)">
+				<xsl:if test="count(Zone) = 0">
+					<xsl:attribute name="href">
+						<xsl:value-of select="Url"></xsl:value-of>
+					</xsl:attribute>
+				</xsl:if>
 				<xsl:attribute name="target">
 					<xsl:value-of select="Target"></xsl:value-of>
 				</xsl:attribute>

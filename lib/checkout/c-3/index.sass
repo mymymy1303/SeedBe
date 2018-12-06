@@ -1,21 +1,42 @@
+.Module-186
+	width: 100%
+	.ModuleContent
+		width: 100%
+		.canhcam-breadcrumb-2
+			width: 100%
+.Module-296
+	.box-resume-content
+		background-color: #f5f5f5
+		border-radius: 5px
 .canhcam-checkout-3
+	h3 
+		+pad(.75rem 0)
+		margin-bottom: 0
+		font-size: 15px
+		text-transform: uppercase
+		span
+			font-weight: 600
+		i
+			margin-right: 0.5rem
+			color: #ff0102 !important
+			font-size: 1rem
+			line-height: 1.5rem
+
+
+
 	.box-resume
 		.box-resume-title 
 			+pad(.75rem 0)
 			margin-bottom: 1.5rem
 			text-transform: uppercase
-			h3 
-				+mar(0)
-			span 
-				span 
-					+fw(bold)
 		.box-resume-content
-			background: #f4f4f4
-			border: 1px solid darken(color-get($mau,trang),10%)
-			+bor-rad(5px)
-			+pad(3rem 2rem)
+			padding: 3rem 2rem
 			label,.form-control
-				font-size: r(11.85px)
+				font-size: 14px
+			.form-control
+				&:placeholder
+					color: #333333
+					opacity: 50%
 			&.box-resume-content-top
 				+bor-rad(5px)
 				border-top: 1px solid darken(color-get($mau,trang),10%)
@@ -65,11 +86,17 @@
 					+fz(.9rem)
 					color: color-get($mau,do-1)
 	.navi
-		a
-			font-size: r(14.82px)
+		a.btn
+			font-size: 15px
 			font-weight: 500
+			width: 120px
+			height: 40px
+			border-radius: 20px
+			line-height: 40px
+			text-align: center
+			padding: 0 !important
 		.btn-primary 
-			background: #3cb878
+			background: #a8002a !important
 			border: 0
 		.btn-secondary
 			background: #f8f8f8
@@ -79,11 +106,14 @@
 		.box-resume-title 
 			margin-bottom: 0.5rem
 			h3 
-				font-size: r(14.82px)
+				font-size: 15px
 				text-transform: uppercase
-				+fw(bold)
+				font-weight: 700
+				color: #333333
 				.fa 
-					color: #298ac4
+					color: #ff0102
+					font-size: 1rem
+					margin-right: 1rem
 	table
 		+bor-rad(5px)
 		tbody 
@@ -92,7 +122,7 @@
 					border-right: 0
 					border-left: 0
 			.product-details
-				font-size: r(13.83px)
+				font-size: 14px
 				font-weight: 600
 				.media
 					@media (max-width: 576px)
@@ -101,20 +131,79 @@
 						max-width: 80px
 						border: 1px solid darken(color-get($mau,trang),10%)
 					.media-body
-						font-size: r(13px)
+						font-size: 13px
 						font-weight: 400
 						margin-left: 0.5rem
 						h4
-							font-size: r(13px)
+							font-size: 13px
 							a 
 								color: darken(color-get($mau,trang),80%)
 			.product-result
 				text-align: right
 				white-space: nowrap
-				font-size: r(13px)
+				font-size: 13px
 				font-weight: 500
 				.sum
-					font-size: r(13px)
-					color: #298ac4
-					+lh(1.5rem)
-					+fw(bold)
+					font-size: 15px
+					color: #a8002a !important
+					font-weight: 700
+				.sum.text-right
+					color: #ff0102 !important
+					font-size: 13px
+					font-weight: 700
+	.box-resume
+		.box-resume-title 
+			margin-bottom: 0.5rem
+			h3 
+				padding: 0.75rem 0
+				margin-bottom: 0
+				font-size: 15px
+				text-transform: uppercase
+				span
+					font-weight: 600
+				i
+					margin-right: 0.5rem
+					color: #ff0102
+					font-size: 1rem
+					line-height: 1.5rem
+	.btn.tbn-sm.btn-warning.text-dark
+		padding: 0 !important
+		background: transparent
+		border: 0
+		outline: none
+	.more, .desc
+		display: none
+	.quantity.text-right
+		color: #303030
+		font-size: 13px
+	.sum.text-right
+		color: #ff0102 !important
+		font-size: 13px
+		font-weight: 700
+	.guest-message
+		font-size: 14px
+		margin-bottom: 1rem
+		color: #333333
+	.content
+		.dec
+			color: #666666 !important
+			font-weight: 700 !important
+			font-size: 13px !important
+		.text-mini
+			color: #666666 !important
+			font-weight: 400 !important
+			font-size: 13px !important
+	.content-wrap
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			height: calc(100% + 1rem)
+			width: 1px
+			background-color: #f4f4f4
+			top: -.5rem
+			left: 64px
+			z-index: 1
+		.img
+			img
+				padding-right: .5rem !important

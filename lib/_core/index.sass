@@ -669,15 +669,14 @@ html
 							top: 0
 							font-size: .55rem
 				&.filter-color
-					.attributes
-						a
-							padding-left: 0
-							&:after
+					a
+						padding-left: 0
+						&:after
+							all: initial
+						&.active
+							box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5)
+							&:before
 								all: initial
-							&.active
-								all: initial
-								&:before
-									all: initial
 				&.filter-size
 					.title
 						p
@@ -1027,3 +1026,117 @@ html
 		i.fa.fa-pencil
 			&:before
 				color: #ffffff
+
+.canhcam-breadcrumb-2
+	padding: 2rem 0
+	+media-breakpoint-up(lg)
+		padding-top: 4rem
+		padding-bottom: 1rem
+	.bullets
+		margin: 0
+		padding: 0
+		font-size: 0
+		+media-breakpoint-up(md)
+			display: flex
+			border-radius: 5px
+		.bullet-wrapper
+			background-color: #f6f6f6
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			padding-left: 1.5rem
+			height: rem(50px)
+			margin-bottom: .75rem
+			+media-breakpoint-up(md)
+				margin-bottom: 0
+				width: 25%
+				position: relative
+				&:first-child
+					border-top-left-radius: 5px
+					border-bottom-left-radius: 5px
+				&:nth-child(1), &:nth-child(2), &:nth-child(3)
+					&:before
+						width: 1px
+						height: calc(50% / 0.86602540378)
+						position: absolute
+						top: -2px
+						right: 0
+						content: ''
+						z-index: 1
+						background-color: #dddddd
+						transform: rotate(-30deg)
+					&:after
+						width: 1px
+						height: calc(50% / 0.86602540378)
+						position: absolute
+						bottom: -2px
+						right: 0
+						content: ''
+						z-index: 1
+						background-color: #dddddd
+						transform: rotate(30deg)
+				&:last-child
+					border-top-right-radius: 5px
+					border-bottom-right-radius: 5px
+					&:before
+						display: none
+					&:after
+						display: none
+			span.num
+				width: 1.875rem
+				height: 1.875rem
+				border-radius: 50%
+				background-color: #ffffff
+				font-size: rem(15px)
+				color: #333333
+				+flex-center()
+				margin-right: rem(10px)
+			span.title
+				color: #333333
+				font-size: rem(13px)
+				line-height: 1.5rem
+				font-weight: 499
+			&.active, &.finished
+				span.num
+					background-color: #303030
+					position: relative
+					&:before
+						color: #ffffff
+						font-size: 1.25rem
+						font-family: "Material Design Icons"
+						content: "\F12C"
+						left: 50%
+						transform: translateX(-50%)
+						position: absolute
+				span.title
+					font-weight: 700
+
+.canhcam-checkout-1
+	h3
+		i.fa.fa-shopping-cart
+			font-size: 1rem
+			color: #ff0102
+			line-height: 1.5rem
+		span
+			font-size: .9375rem
+			color: #333333
+			line-height: 1.5rem
+			text-transform: uppercase
+			font-weight: 700
+
+	.table-bordered th, .table-bordered td
+		border: 0
+	.table-bordered
+		border: 1px solid #ebebeb !important
+	thead
+		th
+			background-color: #f5f5f5
+			color: #000000
+			font-weight: 700
+			font-size: .9375rem
+			text-align: center
+	tbody
+		tr
+			border-bottom: 1px solid #ebebeb
+			&:first-child
+				border-top: 1px solid #303030

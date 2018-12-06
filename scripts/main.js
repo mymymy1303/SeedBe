@@ -48,6 +48,23 @@ const theHuyApp = {
 
 
 theHuyApp.ready(() => {
+
+	$('.canhcam-checkout-3 #checkbox').attr('checked', false)
+	$('.canhcam-checkout-3 #infomem').slideDown();
+	$('.canhcam-checkout-3 #checkbox').on('change', function() {
+		$('.canhcam-checkout-3 #infomem').slideToggle();
+	})
+
+	$('.canhcam-checkout-1 #quantity input').TouchSpin({
+		min: 0,
+		max: 100,
+		buttondown_class: "btn btn-default",
+		buttonup_class: "btn btn-default"
+	});
+
+	$('.lienhe-1 textarea').attr('rows', 7);
+	$('.product-nav').css('display', 'none');
+	$('.product-nav').find('a.active').parents('.product-nav').css('display', 'block');
 	//Tiny slider initialization for Homepage banner
 	theHuyApp.avoidNull(homeBannerInit);
 	theHuyApp.avoidNull(homeSaleSliderInit);
@@ -83,7 +100,7 @@ theHuyApp.ready(() => {
 	theHuyApp.avoidNull(sideSocialFollowMapping);
 	theHuyApp.avoidNull(storeSideBlogFormAndFollowsToMap);
 	theHuyApp.avoidNull(injectSideBlogFormAndFollowsToBlogDetails);
-	
+
 	$("body").on("click", "a.ajaxpagerlinknews", function (e) {
 		e.preventDefault();
 

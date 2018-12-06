@@ -292,62 +292,66 @@
 
 						&::-webkit-scrollbar-thumb
 							background: #a8002a
-						.item
-							display: flex
-							justify-content: center
-							align-items: center
-							flex-wrap: wrap
-							height: 5rem
-							width: 100%
-							margin-top: 1rem
-							margin-bottom: 1rem
-							position: relative
-							&:after
-								position: absolute
-								content: ''
-								width: calc(100% - 2rem)
-								height: 1px
-								background-color: #ebebeb
-								bottom: -0.25rem
-								left: 1rem
-							&:last-child
-								margin-bottom: 0
-							.item-image
-								margin-right: .5rem
-								margin-left: .5rem
-								height: 100%
-								flex: 0 0 calc(30% - 1rem)
-								max-width: calc(30% - 1rem)
+						ul
+							padding: 0
+							margin: 0
+							li
+								padding: 0
 								display: flex
 								justify-content: center
 								align-items: center
-								img
-									width: auto
+								flex-wrap: wrap
+								height: 5rem
+								width: 100%
+								margin-top: 1rem
+								margin-bottom: 1rem
+								position: relative
+								&:after
+									position: absolute
+									content: ''
+									width: calc(100% - 2rem)
+									height: 1px
+									background-color: #ebebeb
+									bottom: -0.25rem
+									left: 1rem
+								&:last-child
+									margin-bottom: 0
+								.product-img
+									margin-right: .5rem
+									margin-left: .5rem
 									height: 100%
-							.item-content
-								margin-right: .5rem
-								margin-left: .5rem
-								height: 100%
-								flex: 0 0 calc(60% - 1rem)
-								max-width: calc(60% - 1rem)
-								display: flex
-								justify-content: center
-								align-items: flex-start
-								flex-direction: column
-								.item-title
-									a
-										font-size: .875rem
-										text-transform: uppercase
-										font-weight: 700
+									flex: 0 0 calc(30% - 1rem)
+									max-width: calc(30% - 1rem)
+									display: flex
+									justify-content: center
+									align-items: center
+									img
+										width: auto
+										height: 100%
+								.product-info
+									margin-right: .5rem
+									margin-left: .5rem
+									height: 100%
+									flex: 0 0 calc(60% - 1rem)
+									max-width: calc(60% - 1rem)
+									display: flex
+									justify-content: center
+									align-items: flex-start
+									flex-direction: column
+									.product-name
+										a
+											font-size: .875rem
+											text-transform: uppercase
+											font-weight: 700
+											color: #333333
+											text-decoration: none
+											transition: .3s ease-in-out
+											&:active, &:focus, &:hover
+												color: #cfa35c
+									.amount
 										color: #333333
-										text-decoration: none
-										transition: .3s ease-in-out
-										&:active, &:focus, &:hover
-											color: #cfa35c
-								.item-amount
-									color: #333333
-									font-size: 1rem
-							.item-remove-button
+										font-size: 1rem
+							.remove-product
 								cursor: pointer
 								margin-right: .5rem
 								margin-left: .5rem
@@ -359,6 +363,12 @@
 								align-items: center
 								i, em
 									margin-right: .5rem
+									position: relative
+									&:before
+										font-family: 'Linearicons-Free'
+										font-size: 1rem
+										color: #333333
+										content: '\e811'
 
 					.cart-checkout
 						.cart-total
@@ -592,6 +602,7 @@
 									opacity: 1
 
 					.search-wrapper
+						margin-left: .5rem
 						cursor: pointer
 						position: relative
 						font-size: 1rem
@@ -709,73 +720,81 @@
 
 								&::-webkit-scrollbar-thumb
 									background: #a8002a
-								.item
-									display: flex
-									justify-content: center
-									align-items: center
-									flex-wrap: wrap
-									height: 5rem
-									width: 100%
-									margin-top: 1rem
-									margin-bottom: 1rem
-									position: relative
-									&:after
-										position: absolute
-										content: ''
-										width: calc(100% - 2rem)
-										height: 1px
-										background-color: #ebebeb
-										bottom: -0.25rem
-										left: 1rem
-									&:last-child
-										margin-bottom: 0
-									.item-image
-										margin-right: .5rem
-										margin-left: .5rem
-										height: 100%
-										flex: 0 0 calc(30% - 1rem)
-										max-width: calc(30% - 1rem)
+								ul
+									li
 										display: flex
 										justify-content: center
 										align-items: center
-										img
-											max-width: 100%
-											height: auto
-									.item-content
-										margin-right: .5rem
-										margin-left: .5rem
-										height: 100%
-										flex: 0 0 calc(60% - 1rem)
-										max-width: calc(60% - 1rem)
-										display: flex
-										justify-content: center
-										align-items: flex-start
-										flex-direction: column
-										.item-title
-											a
-												font-size: .875rem
-												text-transform: uppercase
-												font-weight: 700
-												color: #333333
-												text-decoration: none
-												transition: .3s ease-in-out
-												&:active, &:focus, &:hover
-													color: #cfa35c
-										.item-amount
-											color: #333333
-											font-size: 1rem
-									.item-remove-button
-										cursor: pointer
-										margin-right: .5rem
-										margin-left: .5rem
-										height: 100%
-										flex: 0 0 calc(10% - 1rem)
-										max-width: calc(10% - 1rem)
-										display: flex
-										justify-content: flex-end
-										align-items: center
-										i, em
+										flex-wrap: wrap
+										height: 5rem
+										width: 100%
+										margin-top: 1rem
+										margin-bottom: 1rem
+										position: relative
+										&:after
+											position: absolute
+											content: ''
+											width: calc(100% - 2rem)
+											height: 1px
+											background-color: #ebebeb
+											bottom: -0.25rem
+											left: 1rem
+										&:last-child
+											margin-bottom: 0
+										.product-img
 											margin-right: .5rem
+											margin-left: .5rem
+											height: 100%
+											flex: 0 0 calc(30% - 1rem)
+											max-width: calc(30% - 1rem)
+											display: flex
+											justify-content: center
+											align-items: center
+											img
+												max-width: 100%
+												height: auto
+										.product-info
+											margin-right: .5rem
+											margin-left: .5rem
+											height: 100%
+											flex: 0 0 calc(60% - 1rem)
+											max-width: calc(60% - 1rem)
+											display: flex
+											justify-content: center
+											align-items: flex-start
+											flex-direction: column
+											.product-name
+												a
+													font-size: .875rem
+													text-transform: uppercase
+													font-weight: 700
+													color: #333333
+													text-decoration: none
+													transition: .3s ease-in-out
+													&:active, &:focus, &:hover
+														color: #cfa35c
+											.amount
+												color: #333333
+												font-size: 1rem
+										.remove-product
+											cursor: pointer
+											margin-right: .5rem
+											margin-left: .5rem
+											height: 100%
+											flex: 0 0 calc(10% - 1rem)
+											max-width: calc(10% - 1rem)
+											display: flex
+											justify-content: flex-end
+											align-items: center
+											i, em
+												margin-right: .5rem
+												font-size: 1rem
+												position: relative
+												&:before
+													font-family: 'Linearicons-Free'
+													font-size: 1rem
+													color: #333333
+													content: '\e811'
 
 							.cart-checkout
 								.cart-total

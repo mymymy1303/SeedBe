@@ -2,14 +2,11 @@
 <!--
 /////////////////////////////////////////////////////////////////////////
 
-.$$$$$$\...$$$$$$\..$$\...$$\.$$\...$$\..$$$$$$\...$$$$$$\..$$\......$$\
-$$..__$$\.$$..__$$\.$$$\..$$.|$$.|..$$.|$$..__$$\.$$..__$$\.$$$\....$$$.|
-$$./..\__|$$./..$$.|$$$$\.$$.|$$.|..$$.|$$./..\__|$$./..$$.|$$$$\..$$$$.|
-$$.|......$$$$$$$$.|$$.$$\$$.|$$$$$$$$.|$$.|......$$$$$$$$.|$$\$$\$$.$$.|
-$$.|......$$..__$$.|$$.\$$$$.|$$..__$$.|$$.|......$$..__$$.|$$.\$$$..$$.|
-$$.|..$$\.$$.|..$$.|$$.|\$$$.|$$.|..$$.|$$.|..$$\.$$.|..$$.|$$.|\$../$$.|
-\$$$$$$..|$$.|..$$.|$$.|.\$$.|$$.|..$$.|\$$$$$$..|$$.|..$$.|$$.|.\_/.$$.|
-.\______/.\__|..\__|\__|..\__|\__|..\__|.\______/.\__|..\__|\__|.....\__|
+   ____    _    _   _ _   _    ____    _    __  __ 
+  / ___|  / \  | \ | | | | |  / ___|  / \  |  \/  |
+ | |     / _ \ |  \| | |_| | | |     / _ \ | |\/| |
+ | |___ / ___ \| |\  |  _  | | |___ / ___ \| |  | |
+  \____/_/   \_\_| \_|_| |_|  \____/_/   \_\_|  |_|
 
 Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn
 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.
@@ -26,20 +23,26 @@ Facebook: https://fb.com/canhcam.vn
 	<portal:MetaContent ID="MetaContent" runat="server" />
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;subset=vietnamese" rel="stylesheet">
 	<!-- ////////////// Favicon ////////////// -->
-	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-	<link rel="manifest" href="favicon/manifest.json">
+	<!-- ////////////// Favicon ////////////// -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/Data/Sites/1/skins/default/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/Data/Sites/1/skins/default/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/Data/Sites/1/skins/default/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/Data/Sites/1/skins/default/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/Data/Sites/1/skins/default/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/Data/Sites/1/skins/default/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/Data/Sites/1/skins/default/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/Data/Sites/1/skins/default/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/Data/Sites/1/skins/default/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/Data/Sites/1/skins/default/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/Data/Sites/1/skins/default/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/Data/Sites/1/skins/default/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	 crossorigin="anonymous">
 	<meta name="msapplication-TileColor">
 	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 	<meta name="theme-color">
@@ -118,35 +121,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 												<portal:modulewrapper id="mdl211" runat="server" configuremoduleid="211" />
 											</div>
 											<div class="cart-wrapper main-nav-item">
-												<div class="cart"><span>Cart</span><span class="cart-item-count">0</span></div>
-												<div class="cart-expand">
-													<div class="cart-header">
-														<div class="cart-title"> Có <span>10 </span>sản phẩm trong giỏ hàng</div>
-														<div class="cart-close-button"><i class="lnr lnr-cross"></i></div>
-													</div>
-													<div class="cart-list">
-														<div class="item">
-															<div class="item-image"><img src="./img/sp/1.png" alt=""></div>
-															<div class="item-content">
-																<div class="item-title"> <a href="javascript:void(0)">ghế gunam 15</a></div>
-																<div class="item-amount">2,900,000đ x 1 </div>
-															</div>
-															<div class="item-remove-button"><i class="lnr lnr-trash"></i></div>
-														</div>
-														<div class="item">
-															<div class="item-image"><img src="./img/sp/3.png" alt=""></div>
-															<div class="item-content">
-																<div class="item-title"> <a href="javascript:void(0)">ghế gunam 15</a></div>
-																<div class="item-amount">2,900,000đ x 1 </div>
-															</div>
-															<div class="item-remove-button"><i class="lnr lnr-trash"></i></div>
-														</div>
-													</div>
-													<div class="cart-checkout">
-														<div class="cart-total">Tạm tính: <span>8,700,000đ</span></div>
-														<div class="cart-button"><a class="btn-viewcart" href="javascript:void(0)">Tiến hành thanh toán</a></div>
-													</div>
-												</div>
+												<portal:modulewrapper id="mdl317" runat="server" configuremoduleid="317" />
 											</div>
 										</ul>
 									</div>

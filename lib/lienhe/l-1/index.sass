@@ -1,0 +1,290 @@
+section.lienhe-1
+	padding: 2rem 0
+	padding-bottom: 0
+	+media-breakpoint-up(lg)
+		padding: 4rem 0
+		padding-bottom: 0
+
+	.tagline-contact
+		width: 80%
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+		margin-bottom: .5rem
+		.title
+			h1, h2, h3, h4, h5, h6
+				font-size: rem(36px)
+				color: #333333
+				font-weight: 300
+				margin-bottom: 1.5rem
+		.description
+			p
+				font-size: .9375rem
+				color: #666666
+				font-weight: 300
+				line-height: 1.5rem
+			+media-breakpoint-up(lg)
+				width: 80%
+				margin-left: auto
+				margin-right: auto
+
+	.info
+		margin-top: 2rem
+		margin-bottom: 2rem
+		background-color: #f5f5f5
+		border-radius: 10px
+		display: flex
+		align-items: center
+		padding: 2rem 0
+		+media-breakpoint-up(lg)
+			padding: 0
+			margin-bottom: 0
+			height: calc(100% - 2rem)
+		.content
+			width: fit-content
+			margin-right: auto
+			margin-left: auto
+			height: fit-content
+			+media-breakpoint-up(lg)
+				width: 80%
+		h1
+			color: #000000
+			font-size: 1.25rem
+			text-transform: uppercase
+			font-weight: 500
+		p
+			position: relative
+			font-size: .9375rem
+			line-height: 1.5rem
+			font-weight: 400
+			color: #666666
+			margin-top: 1rem
+			display: flex
+			align-items: center
+			width: fit-content
+			i, em
+				color: #393939
+				font-size: rem(22px)
+				margin-right: .5rem
+			span
+				display: block
+				margin-left: .5rem
+				width: fit-content
+
+	.wrap-form
+		+media-breakpoint-up(lg)
+			margin-top: 2rem
+		> div
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			+media-breakpoint-up(lg)
+				flex-direction: row
+				flex-wrap: wrap
+			.form-group
+				width: 100%
+				margin-bottom: 1.5rem
+				+media-breakpoint-up(lg)
+					flex: 0 0 calc((50% - .9375rem))
+					max-width: calc((50% - .9375rem))
+					margin-right: 1.875rem
+					&:nth-child(2n)
+						margin-right: 0
+					&:last-child
+						margin-right: 0
+						flex: 0 0 100%
+						max-width: 100%
+				input[type="text"]
+					padding-left: 1rem
+					width: 100%
+					height: rem(45px)
+					box-shadow: 0 0 0 1px #ebebeb
+					border: 0
+					outline: none
+				textarea
+					padding-left: 1rem
+					padding-top: .75rem
+					width: 100%
+					box-shadow: 0 0 0 1px #ebebeb
+					border: 0
+					outline: none
+					resize: none
+				input[type="text"], textarea
+					background-color: #f5f5f5
+					border-radius: 3px
+					transition: .3s ease-in-out
+					&::-webkit-input-placeholder 
+						color: #999999
+						// font-style: italic
+						font-size: .9375rem
+
+					&::-moz-placeholder 
+						color: #999999
+						// font-style: italic
+						font-size: .9375rem
+
+					&:-ms-input-placeholder
+						color: #999999
+						// font-style: italic
+						font-size: .9375rem
+
+					&:-moz-placeholder 
+						color: #999999
+						// font-style: italic
+						font-size: .9375rem
+					&:focus
+						box-shadow: 0 0 0 1px $main, 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+						caret-color: $main
+						transition: .3s ease-in-out
+						background-color: #ffffff
+		.frm-captcha
+			margin-right: 1rem
+		.frm-btnwrap
+			label
+				display: none
+			.frm-btn
+				input[type="reset"]
+					display: none
+				input[type="submit"]
+					border: 0
+					outline: none
+					width: 100%
+					height: 100%
+					cursor: pointer
+					color: #ffffff
+					background-color: transparent
+					font-weight: 300
+
+.lienhe-1
+	.form-group.frm-captcha
+		position: relative
+		flex-direction: row-reverse
+		width: calc(100% - 10.875rem)
+		justify-content: flex-end
+		float: left
+		+media-breakpoint-down(sm)
+			width: 100%
+			flex-direction: column-reverse
+		+media-breakpoint-up(lg)
+			margin-bottom: 0
+		.frm-captcha-input
+			width: calc(100% - 226px - 1rem)
+			+media-breakpoint-down(sm)
+				width: 100%
+				margin-right: 0
+			.label
+				display: none
+			input[type="text"]
+				width: 100%
+				padding-left: 1rem
+				height: rem(45px)
+				box-shadow: 0 0 0 1px #ebebeb
+				border: 0
+				outline: none
+				transition: .3s ease-in-out
+				&::-webkit-input-placeholder 
+					color: #999999
+					font-style: italic
+					font-size: .9375rem
+
+				&::-moz-placeholder 
+					color: #999999
+					font-style: italic
+					font-size: .9375rem
+
+				&:-ms-input-placeholder
+					color: #999999
+					font-style: italic
+					font-size: .9375rem
+
+				&:-moz-placeholder 
+					color: #999999
+					font-style: italic
+					font-size: .9375rem
+				&:focus
+					box-shadow: 0 0 0 1px $main, 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+					caret-color: $main
+		.RadCaptcha
+			width: fit-content !important
+			margin-right: .9375rem
+			+media-breakpoint-down(sm)
+				width: 100% !important
+				margin-right: 0
+				margin-bottom: 1rem
+			> span
+				position: absolute
+				bottom: -1.5rem
+				left: 0
+			> div
+				> div
+					display: flex
+					align-items: center
+					img
+						height: rem(45px) !important
+						width: rem(180px) !important
+						box-shadow: 0 0 0 1px #ebebeb
+			.rcRefreshImage
+				font-size: 0
+				position: relative
+				text-decoration: none
+				color: transparent
+				&:visited, &:active, &:hover
+					color: transparent
+				&:before
+					font-size: rem(30px)
+					color: #9d907f
+					margin-left: .5rem
+					margin-right: .5rem
+					font-family: "Font Awesome 5 Free"
+					content: "\f2f9"
+					font-weight: 900
+
+.lienhe-1
+	.info
+		+media-breakpoint-up(lg)
+			height: 100% !important
+	.form-group.frm-btnwrap
+		width: 9.8375rem
+		+media-breakpoint-up(lg)
+			margin-bottom: 0
+		.frm-btn
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			position: relative
+			width: 9.8375rem
+			height: 2.8125rem
+			outline: none
+			border: 0
+			text-decoration: none
+			background-color: #a9002b
+			color: #ffffff
+			font-size: .9375rem
+			font-weight: 300
+			transition: all .3s ease-in-out
+			&:active, &:focus
+				background-color: $main
+				color: #ffffff
+			+media-breakpoint-up(lg)
+				&:hover
+					background-color: $main
+					color: #ffffff
+
+// .footer-form
+// 	input[type="submit"]
+// 		border: 0
+// 		outline: none
+// 		border-radius: 0
+// 		box-shadow: none
+
+.Module-314
+	height: calc(100% - 2rem)
+	.ModuleContent
+		height: 100%
+
+.contact-map
+	padding-bottom: 2rem
+	margin-top: 2rem
+	+media-breakpoint-up(lg)
+		padding-bottom: 4rem

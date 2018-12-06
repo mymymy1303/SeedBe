@@ -178,8 +178,8 @@ $(document).ready(function () {
 	function priceChange() {
 		pageurl = $('.urlwithoutprice').attr('href');
 		$.ajax({
-			url: pageurl, 
-			data: { isajax: true, price: minprice + '-' + maxprice }, 
+			url: pageurl,
+			data: { isajax: true, price: minprice + '-' + maxprice },
 			success: function (data) {
 				$('.ajaxresponse').html($(data).find('.ajaxresponse').html());
 				$('.ajaxfilterresponse').html($(data).find('.ajaxfilterresponse').html());
@@ -264,8 +264,8 @@ $(document).ready(function () {
 	function ProcessAjax(pageurl) {
 		//to get the ajax content and display in div with id 'content'
 		$.ajax({
-			url: pageurl, 
-			data: { isajax: true }, 
+			url: pageurl,
+			data: { isajax: true },
 			success: function (data) {
 				$('.ajaxresponse').html($(data).find('.ajaxresponse').html());
 				$('.ajaxfilterresponse').html($(data).find('.ajaxfilterresponse').html());
@@ -378,7 +378,18 @@ var AjaxCart = {
 			url: urladd,
 			data: data,
 			type: 'post',
-			success: this.success_desktop,
+			success: function (data) {
+				$('.cart .cart-item-count').html(data.updatetopcartsectionhtml);
+				$('.cart-header .cart-title').html($(data.updateflyoutcartsectionhtml).closest('.cartpanel').find('.title').text())
+				$('.cart-total>span').html($(data.updateflyoutcartsectionhtml).closest('.cartpanel').find('.total').find('strong').text())
+				$('.cart-list ul').html($(data.updateflyoutcartsectionhtml).closest('.cartpanel').find('.cart-list ul').html());
+				if (!$('.main-nav-item.cart-wrapper').hasClass('main-nav-item-active')) {
+					$('.main-nav-item.cart-wrapper').addClass('main-nav-item-active')
+				}
+				if (!$('.side-cart-nav').hasClass('active')) {
+					$('.side-cart-nav').addClass('active')
+				}
+			},
 			complete: this.resetLoadWaiting,
 			error: this.ajaxFailure
 		});
@@ -493,7 +504,9 @@ var AjaxCart = {
 			data: data,
 			type: 'post',
 			//success: this.success_desktop,
-			success: function () { location.reload(); },
+			success: function (data) { 
+				window.location.href = data.redirect;
+			 },
 			complete: this.resetLoadWaiting,
 			error: this.ajaxFailure
 		});
@@ -884,6 +897,7 @@ var AjaxCheckout = {
 
 		var urladd = siteRoot + "/Product/Services/CheckoutService.aspx";
 		var data = $('#aspnetForm').serializeArray();
+		console.log(data)
 		data.push({ name: 'method', value: 'SaveOrder' });
 		data.push({ name: 'savetodb', value: savetodb });
 		data.push({ name: 'redirect', value: redirect });
@@ -898,6 +912,7 @@ var AjaxCheckout = {
 			data: data,
 			type: 'post',
 			success: function (response) {
+				console.log(response)
 				if (response.success == true) {
 					if (response.redirect) {
 						setLocation(response.redirect);
